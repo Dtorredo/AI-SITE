@@ -1805,3 +1805,7 @@ video {
     line-height: 0.95;
   }
 }
+.bg-custom {
+  background-color: #D1F8EF;
+}
+
