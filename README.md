@@ -1,29 +1,53 @@
-## 1. Getting Started
+Ukunahi AI – AI-Powered Business Automation for SMEs
 
-NOTE: npm commands overwrite the ./public directory.
+🚀 Overview
 
-Project's source files are placed in ./src/ directory. 
-* ./src/assets - default static files (eg. image placeholders). You should replace them with your own files.
-* ./src/tailwind/ - Tailwind config file used to build the theme. Variables used in Theme Customizer are located in tailwind.config.js file.
+Ukunahi AI is a business automation service designed to help SMEs scale efficiently using AI-powered solutions. Our platform provides AI-driven websites, chatbots, email marketing automation, and social media management to enhance customer engagement and business growth.
 
-All your pages (templates) are stored in separated .pug files
-* ./src/pug/*.pug 
+📌 Features
+	•	AI-Powered Websites – High-converting, SEO-optimized websites tailored for business growth.
+	•	Smart Chatbots – 24/7 automated customer support for lead generation and customer service.
+	•	Automated Email Marketing – AI-driven campaigns to increase open rates and conversions.
+	•	Social Media Automation – AI-generated captions and content scheduling for enhanced audience engagement.
+	•	Interactive AI Virtual Assistant – Real-time AI chatbot for user interaction and customer inquiries.
 
-## 2. Installation
+📂 Repository Structure
 
-```
-# Install dependencies
-npm install 
+This repository contains the source code and assets for the Ukunahi AI website.
+AI-SITE/
+│── index.html        # Home page  and about us
+│── services.html     # Services page   
+│── contact.html      # Contact page  
+│── assets/           # Images, styles, and scripts  
+│── css/              # Stylesheets  
+│── js/               # JavaScript files  
 
-# Run dev server with live preview (Browsersync)
-npm run watch
+ 🎯 Installation & Usage
 
-# Or make a production build 
-npm run build
-```
+To run this project locally:
+	1.	Clone the repository: git clone https://github.com/Dtorredo/AI-SITE.git
+ 	2.	Navigate to the project directory: cd AI-SITE
+  3.	Open index.html in a browser.
 
+🔥 Key Pages
 
-## 3. Credits & Special thanks
+🏠 Home Page
+	•	Headline: “AI-Powered Growth for SMEs – Automate, Scale, Dominate.”
+	•	Call to Action: [Book a Free Consultation]
+	•	AI Chatbot Demo: Interactive pop-up AI assistant.
 
-Image placeholders from https://unsplash.com/
-Screenshot & Logo placeholders from https://www.figma.com/community
+📌 Services Page
+	•	AI-driven web development, chatbots, email marketing, and social media automation.
+	•	Call to Actions: [Build My Website], [Deploy My AI Chatbot], [Boost My Socials].
+
+🏆 Case Studies
+	•	AI Chatbot → 45% More Conversions
+	•	Website Redesign → 60% Sales Boost
+
+📩 Contact Page
+	•	Call to Action: “Got Questions? Let’s Build Your AI Strategy.”
+	•	Form for inquiries & free consultation booking.
+
+🛠️ Tech Stack
+	•	Frontend: HTML, CSS, JavaScript
+	•	AI Chatbot: Integrated interactive AI assistant
