@@ -5,7 +5,7 @@
   "description": "",
   "scripts": {
     "browsersync": "browser-sync start --directory --server ./public --files ./public/* --startPath index.html",
-    "clean": "rimraf public/*",
+    "clean": "rimraf public/assets public/css",
     "copy-assets": "cpx \"src/assets/**/*.*\" public/",
     "css-compile": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.css",
     "css-minified": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.min.css --minify",
