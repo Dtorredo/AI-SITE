@@ -10,7 +10,7 @@
     "css-compile": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.css",
     "css-minified": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.min.css --minify",
     "css": "npm-run-all --sequential css-*",
-    "build": "npm-run-all --sequential clean copy-* css",
+    "build": "npm-run-all --sequential clean copy-assets",
     "watch": "npm-run-all build --parallel watch-css browsersync",
     "watch-css": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.min.css --minify --watch"
   },
