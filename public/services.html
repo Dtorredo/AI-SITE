@@ -24,7 +24,7 @@
               <div class="hidden md:block">
                 <div class="hidden md:block"><a class="inline-flex py-2.5 px-4 items-center justify-center text-sm font-medium text-white border border-teal-900 hover:border-black bg-teal-900 hover:bg-black rounded-full transition duration-200" href="contact.html">Get in touch</a></div>
               </div>
-              <button class="md:hidden text-teal-900 hover:text-teal-800" x-on:click="mobileNavOpen = !mobileNavOpen">
+              <button class="md:hidden text-teal-900 hover:text-teal-800">
                 <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.19995 23.2H26.7999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                   <path d="M5.19995 16H26.7999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -44,72 +44,164 @@
         </div>
         <div class="border-t border-teal-900 border-opacity-25 pt-14">
           <h1 class="font-heading text-4xl sm:text-6xl mb-24">Key to an AI driven future</h1>
-          <div class="flex flex-wrap -mx-4">
-            <div class="w-full sm:w-1/2 px-4 mb-16">
+          <div class="flex flex-wrap -mx-4" x-data="{ openModal: null }">
+
+            <div class="w-full sm:w-1/2 px-4 mb-16 relative">
               <div>
-                  <path d="M0 8C0 3.58172 3.58172 0 8 0H40C44.4183 0 48 3.58172 48 8V40C48 44.4183 44.4183 48 40 48H8C3.58172 48 0 44.4183 0 40V8Z" fill="white"></path>
-                  <circle cx="16" cy="16" r="4" fill="#022C22"></circle>
-                  <circle cx="24" cy="32" r="4" fill="#022C22"></circle>
-                  <circle cx="32" cy="16" r="4" fill="#022C22"></circle>
-                </svg>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+
+  <rect width="48" height="48" rx="8" fill="white" />
+  <g transform="translate(6,6) scale(1.5)" stroke="#022C22" stroke-width="1.5" fill="none">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+  </g>
+</svg>
                 <div class="mt-6">
                   <h5 class="text-2xl font-medium mb-3">Automation service </h5>
-                  <p class="mb-6"> Smart Appointment Scheduling | Automated Invoicing & Payments | Workflow Optimization</p><a class="inline-block text-lg  font-medium hover:text-teal-700" href="#">Read more</a>
+                  <p class="mb-6"> Smart Appointment Scheduling | Automated Invoicing & Payments | Workflow Optimization</p>
+                  <a class="inline-block text-lg font-medium hover:text-teal-700 cursor-pointer" @click="openModal = openModal === 'automation' ? null : 'automation'">Read more</a>
+                </div>
+              </div>
+              <div class="absolute top-0 left-full ml-4 z-50 w-96" x-show="openModal === 'automation'" x-transition.opacity x-on:click.outside="openModal = null">
+                <div class="bg-white backdrop-blur-lg rounded-lg shadow-xl p-8 border border-gray-200">
+                  <button class="absolute top-0 right-1 text-gray-500 hover:text-gray-700" @click="openModal = null">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                  </button>
+                  <h3 class="text-2xl font-bold mb-4 text-gray-800">Automation Service Details</h3>
+                  <p class="text-gray-700 mb-4 text-sm">
+                      Our Automation Service streamlines your business operations through intelligent automation. We offer:
+                  </p>
+                  <ul class="list-disc list-inside text-gray-700 mb-4 text-sm space-y-1">
+                      <li><strong>Smart Appointment Scheduling:</strong> Automated systems to manage bookings, reduce no-shows, and optimize your calendar.</li>
+                      <li><strong>Automated Invoicing & Payments:</strong> Solutions to generate and send invoices automatically, track payments, and send reminders, improving cash flow.</li>
+                      <li><strong>Workflow Optimization:</strong> Analyzing and automating repetitive tasks within your workflows to increase efficiency and reduce manual errors.</li>
+                  </ul>
+                  <p class="text-gray-700 text-sm">
+                      Embrace automation to free up valuable time and resources, allowing your team to focus on strategic initiatives and customer satisfaction.
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="w-full sm:w-1/2 px-4 mb-16">
+
+            <div class="w-full sm:w-1/2 px-4 mb-16 relative">
               <div>
-                  <path d="M0 8C0 3.58172 3.58172 0 8 0H40C44.4183 0 48 3.58172 48 8V40C48 44.4183 44.4183 48 40 48H8C3.58172 48 0 44.4183 0 40V8Z" fill="white"></path>
-                  <rect x="23" y="8" width="2" height="12" rx="1" fill="#022C22"></rect>
-                  <rect x="23" y="28" width="2" height="12" rx="1" fill="#022C22"></rect>
-                  <rect x="34.6066" y="11.9792" width="2" height="12" rx="1" transform="rotate(45 34.6066 11.9792)" fill="#022C22"></rect>
-                  <rect x="20.4645" y="26.1213" width="2" height="12" rx="1" transform="rotate(45 20.4645 26.1213)" fill="#022C22"></rect>
-                  <rect x="28" y="25" width="2" height="12" rx="1" transform="rotate(-90 28 25)" fill="#022C22"></rect>
-                  <rect x="8" y="25" width="2" height="12" rx="1" transform="rotate(-90 8 25)" fill="#022C22"></rect>
-                  <rect x="26.1213" y="27.5355" width="2" height="12" rx="1" transform="rotate(-45 26.1213 27.5355)" fill="#022C22"></rect>
-                  <rect x="11.9792" y="13.3934" width="2" height="12" rx="1" transform="rotate(-45 11.9792 13.3934)" fill="#022C22"></rect>
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                 <rect width="48" height="48" rx="8" fill="white" />
+                  <g transform="translate(6,6) scale(1.5)" stroke="#022C22" stroke-width="1.5" fill="none">
+                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/>
+                   </g>
                 </svg>
                 <div class="mt-6">
                   <h5 class="text-2xl font-medium mb-3">Web development</h5>
-                  <p class="mb-6"> AI powered E-commerce Websites | Custom Business Websites | Websites with CRM Integration <br> Website Performance Optimization | Word Websites</p><a class="inline-block text-lg  font-medium hover:text-teal-700" href="#">Read more</a>
+                  <p class="mb-6"> AI powered E-commerce Websites | Custom Business Websites | Websites with CRM Integration <br> Website Performance Optimization | WordPress Websites</p>
+                  <a class="inline-block text-lg font-medium hover:text-teal-700 cursor-pointer" @click="openModal = openModal === 'webdev' ? null : 'webdev'">Read more</a>
+                </div>
+              </div>
+              <div class="absolute top-0 right-full mr-4 z-50 w-96" x-show="openModal === 'webdev'" x-transition.opacity x-on:click.outside="openModal = null">
+                <div class="bg-white backdrop-blur-lg rounded-lg shadow-xl p-8 border border-gray-200">
+                  <button class="absolute top-0 right-1 text-gray-500 hover:text-gray-700" @click="openModal = null">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                  </button>
+                  <h3 class="text-2xl font-bold mb-4 text-gray-800">Web Development Details</h3>
+                  <p class="text-gray-700 mb-4 text-sm">
+                      We build modern and responsive websites tailored to your needs:
+                  </p>
+                  <ul class="list-disc list-inside text-gray-700 mb-4 text-sm space-y-1">
+                      <li><strong>AI-powered E-commerce Websites:</strong> Enhance user experience and sales with AI-driven recommendations and personalized shopping.</li>
+                      <li><strong>Custom Business Websites:</strong> Professional and unique websites designed to represent your brand effectively.</li>
+                      <li><strong>Websites with CRM Integration:</strong> Seamlessly connect your website with CRM systems for efficient lead management and customer interaction.</li>
+                      <li><strong>Website Performance Optimization:</strong> Ensuring fast loading times and smooth user experience for better engagement and SEO.</li>
+                      <li><strong>WordPress Websites:</strong> Robust and flexible websites built on the world's most popular CMS, customized to your specifications.</li>
+                  </ul>
                 </div>
               </div>
             </div>
-            <div class="w-full sm:w-1/2 px-4 mb-16 sm:mb-0">
+
+            <div class="w-full sm:w-1/2 px-4 mb-16 sm:mb-0 relative">
               <div>
-                  <path d="M0 8C0 3.58172 3.58172 0 8 0H40C44.4183 0 48 3.58172 48 8V40C48 44.4183 44.4183 48 40 48H8C3.58172 48 0 44.4183 0 40V8Z" fill="white"></path>
-                  <path d="M25 24C25 24.5523 24.5523 25 24 25C23.4477 25 23 24.5523 23 24C23 23.4477 23.4477 23 24 23C24.5523 23 25 23.4477 25 24Z" fill="#022C22"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M24 25C24.5523 25 25 24.5523 25 24C25 23.4477 24.5523 23 24 23C23.4477 23 23 23.4477 23 24C23 24.5523 23.4477 25 24 25Z" fill="#022C22"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M40 23C40.5523 23 41 23.4477 41 24C41 33.3888 33.3888 41 24 41C23.4477 41 23 40.5523 23 40C23 39.4477 23.4477 39 24 39C32.2843 39 39 32.2843 39 24C39 23.4477 39.4477 23 40 23Z" fill="#022C22"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M24 9C15.7157 9 9 15.7157 9 24C9 24.5523 8.55228 25 8 25C7.44772 25 7 24.5523 7 24C7 14.6112 14.6112 7 24 7C24.5523 7 25 7.44772 25 8C25 8.55228 24.5523 9 24 9Z" fill="#022C22"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M36 23C36.5523 23 37 23.4477 37 24C37 31.1797 31.1797 37 24 37C23.4477 37 23 36.5523 23 36C23 35.4477 23.4477 35 24 35C30.0751 35 35 30.0751 35 24C35 23.4477 35.4477 23 36 23Z" fill="#022C22"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M24 13C17.9249 13 13 17.9249 13 24C13 24.5523 12.5523 25 12 25C11.4477 25 11 24.5523 11 24C11 16.8203 16.8203 11 24 11C24.5523 11 25 11.4477 25 12C25 12.5523 24.5523 13 24 13Z" fill="#022C22"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M32 23C32.5523 23 33 23.4477 33 24C33 28.9706 28.9706 33 24 33C23.4477 33 23 32.5523 23 32C23 31.4477 23.4477 31 24 31C27.866 31 31 27.866 31 24C31 23.4477 31.4477 23 32 23Z" fill="#022C22"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M24 17C20.134 17 17 20.134 17 24C17 24.5523 16.5523 25 16 25C15.4477 25 15 24.5523 15 24C15 19.0294 19.0294 15 24 15C24.5523 15 25 15.4477 25 16C25 16.5523 24.5523 17 24 17Z" fill="#022C22"></path>
-                </svg>
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+ 
+  <rect width="48" height="48" rx="8" fill="white" />
+
+  <g transform="translate(6,6) scale(1.5)">
+    <path d="M4.5 8.625V15A1.125 1.125 0 0 0 5.625 16.125H18.375A1.125 1.125 0 0 0 19.5 15V8.625M4.5 8.625A1.125 1.125 0 0 1 5.625 7.5H18.375A1.125 1.125 0 0 1 19.5 8.625M4.5 8.625V4.5A1.125 1.125 0 0 1 5.625 3.375H18.375A1.125 1.125 0 0 1 19.5 4.5V8.625M9 17.25V18.257A2.25 2.25 0 0 1 9.621 20.379L10.5 21H13.5L14.379 20.379A2.25 2.25 0 0 1 15 18.257V17.25" 
+    stroke="#022C22" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+</svg>
                 <div class="mt-6">
-                  <h5 class="text-2xl font-medium mb-3">AI  chatbot integration</h5>
-                  <p class="mb-6">AI Customer Support Chatbots | AI Sales & Lead Generation Bots <br> AI Product Recommendation Systems | AI Chatbot Integration with Messaging Platforms</p><a class="inline-block text-lg  font-medium hover:text-teal-700" href="#">Read more</a>
+                  <h5 class="text-2xl font-medium mb-3">AI chatbot integration</h5>
+                  <p class="mb-6">AI Customer Support Chatbots | AI Sales & Lead Generation Bots <br> AI Product Recommendation Systems | AI Chatbot Integration with Messaging Platforms</p>
+                  <a class="inline-block text-lg font-medium hover:text-teal-700 cursor-pointer" @click="openModal = openModal === 'chatbot' ? null : 'chatbot'">Read more</a>
+                </div>
+              </div>
+              <div class="absolute top-0 left-full ml-4 z-50 w-96" x-show="openModal === 'chatbot'" x-transition.opacity x-on:click.outside="openModal = null">
+                <div class="bg-white backdrop-blur-lg rounded-lg shadow-xl p-8 border border-gray-200">
+                  <button class="absolute top-0 right-1 text-gray-500 hover:text-gray-700" @click="openModal = null">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                  </button>
+                  <h3 class="text-2xl font-bold mb-4 text-gray-800">AI Chatbot Integration Details</h3>
+                  <p class="text-gray-700 mb-4 text-sm">
+                      Leverage the power of AI with our comprehensive chatbot solutions:
+                  </p>
+                  <ul class="list-disc list-inside text-gray-700 mb-4 text-sm space-y-1">
+                      <li><strong>AI Customer Support Chatbots:</strong> Provide instant, 24/7 support to your customers, reducing response times and improving satisfaction.</li>
+                      <li><strong>AI Sales & Lead Generation Bots:</strong> Qualify leads, answer common questions, and guide potential customers through the sales funnel.</li>
+                      <li><strong>AI Product Recommendation Systems:</strong> Offer personalized product suggestions to users, boosting engagement and conversion rates.</li>
+                      <li><strong>AI Chatbot Integration with Messaging Platforms:</strong> Seamlessly integrate chatbots into WhatsApp, Facebook Messenger, and other platforms for multi-channel communication.</li>
+                  </ul>
                 </div>
               </div>
             </div>
-            <div class="w-full sm:w-1/2 px-4">
+
+            <div class="w-full sm:w-1/2 px-4 relative">
               <div>
-                  <path d="M0 8C0 3.58172 3.58172 0 8 0H40C44.4183 0 48 3.58172 48 8V40C48 44.4183 44.4183 48 40 48H8C3.58172 48 0 44.4183 0 40V8Z" fill="white"></path>
-                  <path d="M23.8425 12.3779C23.9008 12.238 24.0992 12.238 24.1575 12.3779L30.1538 26.7692C31.9835 31.1605 28.7572 36 24 36Lnan nanL24 36C19.2428 36 16.0165 31.1605 17.8462 26.7692L23.8425 12.3779Z" fill="#022C22"></path>
-                </svg>
+               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <rect width="48" height="48" rx="8" fill="white" />
+
+  <g transform="translate(6,6) scale(1.5)" stroke="#022C22" stroke-width="1.5" fill="none">
+    <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+  </g>
+</svg>
                 <div class="mt-6">
                   <h5 class="text-2xl font-medium mb-3">AI-Powered Lead Generation & CRM Integration </h5>
-                  <p class="mb-6">Hands-on CRM Training | CRM Integration for Automated Sales & Support | AI-Driven Lead & Capture and Nurturing <br> Multi-Channel CRM Communication (WhatsApp, Email, SMS)</p><a class="inline-block text-lg  font-medium hover:text-teal-700" href="#">Read more</a>
+                  <p class="mb-6">Hands-on CRM Training | CRM Integration for Automated Sales & Support | AI-Driven Lead Capture and Nurturing <br> Multi-Channel CRM Communication (WhatsApp, Email, SMS)</p>
+                  <a class="inline-block text-lg font-medium hover:text-teal-700 cursor-pointer" @click="openModal = openModal === 'crm' ? null : 'crm'">Read more</a>
+                </div>
+              </div>
+              <div class="absolute top-0 right-full mr-4 z-50 w-96" x-show="openModal === 'crm'" x-transition.opacity x-on:click.outside="openModal = null">
+                <div class="bg-white backdrop-blur-lg rounded-lg shadow-xl p-8 border border-gray-200">
+                  <button class="absolute top-0 right-1 text-gray-500 hover:text-gray-700" @click="openModal = null">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                  </button>
+                  <h3 class="text-2xl font-bold mb-4 text-gray-800">AI-Powered Lead Generation & CRM Integration Details</h3>
+                  <p class="text-gray-700 mb-4 text-sm">
+                      Supercharge your sales and customer management with our integrated solutions:
+                  </p>
+                  <ul class="list-disc list-inside text-gray-700 mb-4 text-sm space-y-1">
+                      <li><strong>Hands-on CRM Training:</strong> Empower your team with the knowledge and skills to effectively use your CRM system.</li>
+                      <li><strong>CRM Integration for Automated Sales & Support:</strong> Automate sales processes, customer support, and lead nurturing directly within your CRM.</li>
+                      <li><strong>AI-Driven Lead Capture and Nurturing:</strong> Utilize AI to identify, capture, and nurture high-quality leads, converting them into loyal customers.</li>
+                      <li><strong>Multi-Channel CRM Communication (WhatsApp, Email, SMS):</strong> Manage customer interactions across various platforms seamlessly from your CRM.</li>
+                  </ul>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
     </div>
-  </section>
+</section>
 
   <section class="relative py-12 lg:py-24 bg-orange-50 overflow-hidden"><img class="absolute bottom-0 left-0" src="" alt=""/>
     <div class="container px-4 mx-auto relative">
