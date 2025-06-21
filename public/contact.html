@@ -22,29 +22,22 @@
       });
     }
 }">
-         <nav class="mx-4 py-6 border-b" >
+  <nav class="py-6" x-data="{ mobileNavOpen: false }">
     <div class="container mx-auto px-4">
         <div class="relative flex items-center justify-between">
-            <a class="inline-block" href="index.html">
+            <a class="inline-block" href="#">
                 <img class="h-8" src="" alt=""/>
             </a>
-            <ul 
-                :class="{
-                    'hidden': !mobileNavOpen, 
-                    'flex flex-col md:flex-row absolute md:static top-full left-0 w-full bg-white md:bg-transparent pt-18 p-4 md:p-0 z-20': mobileNavOpen
-                }" 
-                class="md:flex" 
-                @click.outside="mobileNavOpen = false"
-            >
-                <li class="mr-4 lg:mr-8 mb-4 md:mb-0"><a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="index.html">Home</a></li>
-                <li class="mr-4 lg:mr-8 mb-4 md:mb-0"><a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="pricing.html">Pricing</a></li>
-                <li class="mr-4 lg:mr-8"><a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="services.html">Services</a></li>
+            <ul :class="{'hidden': !mobileNavOpen, 'flex flex-col md:flex-row absolute md:static top-full left-0 w-full bg-gray-800 md:bg-transparent pt-18 p-4 md:p-0 z-50': mobileNavOpen}" class="md:flex" @click.outside="mobileNavOpen = false" >
+                <li class="mr-8 mb-4 md:mb-0"><a class="inline-block text-white hover:text-lime-500 font-medium" href="pricing.html">Pricing</a></li>
+                <li class="mr-8 mb-4 md:mb-0"><a class="inline-block text-white hover:text-lime-500 font-medium" href="contact.html">Contact us</a></li>
+                <li class="mr-8 mb-4 md:mb-0"><a class="inline-block text-white hover:text-lime-500 font-medium" href="services.html">Services</a></li>
+
+                
             </ul>
             <div class="flex items-center justify-end">
-                <div class="hidden md:block">
-                    <a class="inline-flex py-2.5 px-4 items-center justify-center text-sm font-medium text-white border border-teal-900 hover:border-black bg-teal-900 hover:bg-black rounded-full transition duration-200" href="contact.html">Get in touch</a>
-                </div>
-                <button class="md:hidden text-teal-900 hover:text-teal-800" @click="mobileNavOpen = !mobileNavOpen; $event.stopPropagation()">
+                
+                <button class="md:hidden text-white hover:text-lime-500" @click="mobileNavOpen = !mobileNavOpen; $event.stopPropagation()">
                     <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.19995 23.2H26.7999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                         <path d="M5.19995 16H26.7999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
