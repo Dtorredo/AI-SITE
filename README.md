@@ -1,6 +1,6 @@
 Ukunahi AI – AI-Powered Business Automation for SMEs
 
-##### live demo : https://ai-site-nqsw.vercel.app/
+[live demo](https://ai-site-nqsw.vercel.app/)
 🚀 Overview
 
 Ukunahi AI is a business automation service designed to help SMEs scale efficiently using AI-powered solutions. Our platform provides AI-driven websites, chatbots, email marketing automation, and social media management to enhance customer engagement and business growth.
