@@ -1,206 +1,143 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>AI</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com"/>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/tailwind/tailwind.min.css"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png"/>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer="defer"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tailwind/tailwind.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+</head>
 <body>
-    
-<section class="p-4 bg-white" x-data="{ mobileNavOpen: false }">
-     <nav class="mx-4 py-6 border-b" >
-    <div class="container mx-auto px-4">
+  <section class="p-4 bg-white" x-data="{ openModal: null, mobileNavOpen: false }">
+    <nav class="mx-4 py-6 border-b">
+      <div class="container mx-auto px-4">
         <div class="relative flex items-center justify-between">
-            <a class="inline-block" href="index.html">
-                <img class="h-8" src="" alt=""/>
-            </a>
-            <ul 
-                :class="{
-                    'hidden': !mobileNavOpen, 
-                    'flex flex-col md:flex-row absolute md:static top-full left-0 w-full bg-white md:bg-transparent pt-18 p-4 md:p-0 z-20': mobileNavOpen
-                }" 
-                class="md:flex" 
-                @click.outside="mobileNavOpen = false"
-            >
-                <li class="mr-4 lg:mr-8 mb-4 md:mb-0"><a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="index.html">Home</a></li>
-                <li class="mr-4 lg:mr-8 mb-4 md:mb-0"><a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="pricing.html">Pricing</a></li>
-                <li class="mr-4 lg:mr-8"><a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="contact.html">Contact us</a></li>
-            </ul>
-            <div class="flex items-center justify-end">
-                
-                <button class="md:hidden text-teal-900 hover:text-teal-800" @click="mobileNavOpen = !mobileNavOpen; $event.stopPropagation()">
-                    <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5.19995 23.2H26.7999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M5.19995 16H26.7999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M5.19995 8.79999H26.7999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                </button>
-            </div>
+          <a class="inline-block" href="index.html">
+            <img class="h-8" src="" alt="" />
+          </a>
+          <ul :class="{
+                'hidden': !mobileNavOpen,
+                'flex flex-col md:flex-row absolute md:static top-full left-0 w-full bg-white md:bg-transparent pt-18 p-4 md:p-0 z-20': mobileNavOpen
+              }"
+              class="md:flex"
+              @click.outside="mobileNavOpen = false">
+            <li class="mr-4 lg:mr-8 mb-4 md:mb-0">
+              <a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="index.html">Home</a>
+            </li>
+            <li class="mr-4 lg:mr-8 mb-4 md:mb-0">
+              <a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="pricing.html">Pricing</a>
+            </li>
+            <li class="mr-4 lg:mr-8">
+              <a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="contact.html">Contact us</a>
+            </li>
+          </ul>
+          <div class="flex items-center justify-end">
+            <button class="md:hidden text-teal-900 hover:text-teal-800" @click="mobileNavOpen = !mobileNavOpen; $event.stopPropagation()">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.2 23.2H26.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M5.2 16H26.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M5.2 8.8H26.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+          </div>
         </div>
-    </div>
-</nav>
-    <div class="pt-16 pb-24 px-5 xs:px-8 xl:px-12"> 
+      </div>
+    </nav>
+
+    <div class="pt-16 pb-24 px-5 xs:px-8 xl:px-12">
       <div class="container mx-auto px-4">
         <div class="flex mb-4 items-center">
-          <svg width="8" height="8" viewbox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="4" cy="4" r="4" fill="#022C22"></circle>
-          </svg><span class="inline-block ml-2 text-sm font-medium">What are the Services we offer?</span>
+          <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="4" cy="4" r="4" fill="#022C22" />
+          </svg>
+          <span class="inline-block ml-2 text-sm font-medium">What are the Services we offer?</span>
         </div>
         <div class="border-t border-teal-900 border-opacity-25 pt-14">
           <h1 class="font-heading text-4xl sm:text-6xl mb-24">Key to an AI driven future</h1>
-          <div class="flex flex-wrap -mx-4" x-data="{ openModal: null }">
+          <div class="flex flex-wrap -mx-4">
 
-            <div class="w-full sm:w-1/2 px-4 mb-16 relative">
-              <div class="bg-white p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 h-full">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="48" height="48" rx="8" fill="#F0FDF4" /> <g transform="translate(6,6) scale(1.5)" stroke="#022C22" stroke-width="1.5" fill="none">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
-                  </g>
-                </svg>
-                <div class="mt-6">
-                  <h5 class="text-2xl font-medium mb-3">Automation service </h5>
-                  <p class="mb-6 text-gray-700"> Smart Appointment Scheduling <br> Automated Invoicing & Payments <br> Workflow Optimization</p>
-                  <a class="inline-block text-lg font-medium text-teal-700 hover:text-teal-900 cursor-pointer" @click="openModal = openModal === 'automation' ? null : 'automation'">Read more</a>
+            <template x-for="(service, index) in [
+              {
+                key: 'automation',
+                title: 'Automation Service',
+                description: 'Smart Appointment Scheduling<br>Automated Invoicing & Payments<br>Workflow Optimization',
+                details: `<ul class='list-disc list-inside text-gray-700 space-y-2 mb-6'>
+                  <li><strong>Smart Appointment Scheduling:</strong> Manage bookings, reduce no-shows, optimize calendars.</li>
+                  <li><strong>Automated Invoicing & Payments:</strong> Generate/send invoices, track payments, send reminders.</li>
+                  <li><strong>Workflow Optimization:</strong> Automate tasks, reduce errors, increase efficiency.</li>
+                </ul><p class='text-gray-700'>Embrace automation to free up time and let your team focus on growth and customer success.</p>`
+              },
+              {
+                key: 'webdev',
+                title: 'Web Development',
+                description: 'AI powered E-commerce Websites | Custom Business Websites<br>Websites with CRM Integration<br>Website Performance Optimization | WordPress Websites',
+                details: `<ul class='list-disc list-inside text-gray-700 mb-4 text-sm space-y-1'>
+                  <li><strong>AI-powered E-commerce Websites:</strong> Enhance user experience with AI-driven recommendations.</li>
+                  <li><strong>Custom Business Websites:</strong> Unique websites designed to represent your brand.</li>
+                  <li><strong>Websites with CRM Integration:</strong> Efficient lead management and customer interaction.</li>
+                  <li><strong>Performance Optimization:</strong> Fast loading times and smooth user experience.</li>
+                  <li><strong>WordPress Websites:</strong> Customized flexible websites built on WordPress.</li>
+                </ul>`
+              },
+              {
+                key: 'chatbot',
+                title: 'AI Chatbot Integration',
+                description: 'AI Customer Support Chatbots | AI Sales & Lead Generation Bots<br>AI Product Recommendation Systems<br>Chatbot Integration with Messaging Platforms',
+                details: `<ul class='list-disc list-inside text-gray-700 mb-4 text-sm space-y-1'>
+                  <li><strong>Customer Support:</strong> Provide 24/7 support and reduce response times.</li>
+                  <li><strong>Sales & Lead Bots:</strong> Qualify leads and guide customers.</li>
+                  <li><strong>Recommendation Systems:</strong> Boost engagement with personalized suggestions.</li>
+                  <li><strong>Messaging Platform Integration:</strong> Seamlessly connect with WhatsApp, Messenger, and more.</li>
+                </ul>`
+              },
+              {
+                key: 'crm',
+                title: 'AI-Powered Lead Gen & CRM Integration',
+                description: 'Hands-on CRM Training | CRM Integration for Automated Sales & Support<br>Lead Capture and Nurturing<br>Multi-Channel CRM Communication',
+                details: `<ul class='list-disc list-inside text-gray-700 mb-4 text-sm space-y-1'>
+                  <li><strong>CRM Training:</strong> Equip your team with CRM skills.</li>
+                  <li><strong>Automated Sales & Support:</strong> Integrated into your CRM system.</li>
+                  <li><strong>Lead Nurturing:</strong> AI-powered lead conversion strategies.</li>
+                  <li><strong>Multi-Channel:</strong> Use WhatsApp, Email, SMS directly via CRM.</li>
+                </ul>`
+              }
+            ]" :key="index">
+              <div class="w-full sm:w-1/2 px-4 mb-16 relative">
+                <div class="bg-white p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 h-full">
+                  <div class="mt-6">
+                    <h5 class="text-2xl font-medium mb-3" x-text="service.title"></h5>
+                    <p class="mb-6 text-gray-700" x-html="service.description"></p>
+                    <a class="inline-block text-lg font-medium text-teal-700 hover:text-teal-900 cursor-pointer"
+                       @click="openModal = openModal === service.key ? null : service.key">Read more</a>
+                  </div>
+                </div>
+                <div class="absolute top-0 left-full ml-4 z-50 w-96"
+                     x-show="openModal === service.key"
+                     x-transition.opacity
+                     x-on:click.outside="openModal = null">
+                  <div class="bg-white backdrop-blur-lg rounded-lg shadow-xl p-8 border border-gray-200">
+                    <button class="absolute top-0 right-1 text-gray-500 hover:text-gray-700" @click="openModal = null">
+                      <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800" x-text="service.title + ' Details'"></h3>
+                    <div class="text-gray-700 text-sm" x-html="service.details"></div>
+                  </div>
                 </div>
               </div>
-              <div class="absolute top-0 left-full ml-4 z-50 w-96" x-show="openModal === 'automation'" x-transition.opacity x-on:click.outside="openModal = null">
-                <div class="bg-white backdrop-blur-lg rounded-lg shadow-xl p-8 border border-gray-200">
-                  <button class="absolute top-0 right-1 text-gray-500 hover:text-gray-700" @click="openModal = null">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                  </button>
-                  <h3 class="text-2xl font-bold mb-4 text-gray-800">Automation Service Details</h3>
-                  <p class="text-gray-700 mb-4 text-sm">
-                      Our Automation Service streamlines your business operations through intelligent automation. We offer:
-                  </p>
-                  <ul class="list-disc list-inside text-gray-700 mb-4 text-sm space-y-1">
-                      <li><strong>Smart Appointment Scheduling:</strong> Automated systems to manage bookings, reduce no-shows, and optimize your calendar.</li>
-                      <li><strong>Automated Invoicing & Payments:</strong> Solutions to generate and send invoices automatically, track payments, and send reminders, improving cash flow.</li>
-                      <li><strong>Workflow Optimization:</strong> Analyzing and automating repetitive tasks within your workflows to increase efficiency and reduce manual errors.</li>
-                  </ul>
-                  <p class="text-gray-700 text-sm">
-                      Embrace automation to free up valuable time and resources, allowing your team to focus on strategic initiatives and customer satisfaction.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="w-full sm:w-1/2 px-4 mb-16 relative">
-              <div class="bg-white p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 h-full">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                 <rect width="48" height="48" rx="8" fill="#F0FDF4" /> <g transform="translate(6,6) scale(1.5)" stroke="#022C22" stroke-width="1.5" fill="none">
-                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/>
-                   </g>
-                </svg>
-                <div class="mt-6">
-                  <h5 class="text-2xl font-medium mb-3">Web development</h5>
-                  <p class="mb-6 text-gray-700"> AI powered E-commerce Websites | Custom Business Websites <br> Websites with CRM Integration <br> Website Performance Optimization | WordPress Websites</p>
-                  <a class="inline-block text-lg font-medium text-teal-700 hover:text-teal-900 cursor-pointer" @click="openModal = openModal === 'webdev' ? null : 'webdev'">Read more</a>
-                </div>
-              </div>
-              <div class="absolute top-0 right-full mr-4 z-50 w-96" x-show="openModal === 'webdev'" x-transition.opacity x-on:click.outside="openModal = null">
-                <div class="bg-white backdrop-blur-lg rounded-lg shadow-xl p-8 border border-gray-200">
-                  <button class="absolute top-0 right-1 text-gray-500 hover:text-gray-700" @click="openModal = null">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                  </button>
-                  <h3 class="text-2xl font-bold mb-4 text-gray-800">Web Development Details</h3>
-                  <p class="text-gray-700 mb-4 text-sm">
-                      We build modern and responsive websites tailored to your needs:
-                  </p>
-                  <ul class="list-disc list-inside text-gray-700 mb-4 text-sm space-y-1">
-                      <li><strong>AI-powered E-commerce Websites:</strong> Enhance user experience and sales with AI-driven recommendations and personalized shopping.</li>
-                      <li><strong>Custom Business Websites:</strong> Professional and unique websites designed to represent your brand effectively.</li>
-                      <li><strong>Websites with CRM Integration:</strong> Seamlessly connect your website with CRM systems for efficient lead management and customer interaction.</li>
-                      <li><strong>Website Performance Optimization:</strong> Ensuring fast loading times and smooth user experience for better engagement and SEO.</li>
-                      <li><strong>WordPress Websites:</strong> Robust and flexible websites built on the world's most popular CMS, customized to your specs.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="w-full sm:w-1/2 px-4 mb-16 sm:mb-0 relative">
-              <div class="bg-white p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 h-full">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="48" height="48" rx="8" fill="#F0FDF4" /> <g transform="translate(6,6) scale(1.5)">
-                    <path d="M4.5 8.625V15A1.125 1.125 0 0 0 5.625 16.125H18.375A1.125 1.125 0 0 0 19.5 15V8.625M4.5 8.625A1.125 1.125 0 0 1 5.625 7.5H18.375A1.125 1.125 0 0 1 19.5 8.625M4.5 8.625V4.5A1.125 1.125 0 0 1 5.625 3.375H18.375A1.125 1.125 0 0 1 19.5 4.5V8.625M9 17.25V18.257A2.25 2.25 0 0 1 9.621 20.379L10.5 21H13.5L14.379 20.379A2.25 2.25 0 0 1 15 18.257V17.25"
-                    stroke="#022C22" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                  </g>
-                </svg>
-                <div class="mt-6">
-                  <h5 class="text-2xl font-medium mb-3">AI chatbot integration</h5>
-                  <p class="mb-6 text-gray-700">AI Customer Support Chatbots | AI Sales & Lead Generation Bots <br> AI Product Recommendation Systems  <br>AI Chatbot Integration with Messaging Platforms</p>
-                  <a class="inline-block text-lg font-medium text-teal-700 hover:text-teal-900 cursor-pointer" @click="openModal = openModal === 'chatbot' ? null : 'chatbot'">Read more</a>
-                </div>
-              </div>
-              <div class="absolute top-0 left-full ml-4 z-50 w-96" x-show="openModal === 'chatbot'" x-transition.opacity x-on:click.outside="openModal = null">
-                <div class="bg-white backdrop-blur-lg rounded-lg shadow-xl p-8 border border-gray-200">
-                  <button class="absolute top-0 right-1 text-gray-500 hover:text-gray-700" @click="openModal = null">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                  </button>
-                  <h3 class="text-2xl font-bold mb-4 text-gray-800">AI Chatbot Integration Details</h3>
-                  <p class="text-gray-700 mb-4 text-sm">
-                      Leverage the power of AI with our comprehensive chatbot solutions:
-                  </p>
-                  <ul class="list-disc list-inside text-gray-700 mb-4 text-sm space-y-1">
-                      <li><strong>AI Customer Support Chatbots:</strong> Provide instant, 24/7 support to your customers, reducing response times and improving satisfaction.</li>
-                      <li><strong>AI Sales & Lead Generation Bots:</strong> Qualify leads, answer common questions, and guide potential customers through the sales funnel.</li>
-                      <li><strong>AI Product Recommendation Systems:</strong> Offer personalized product suggestions to users, boosting engagement and conversion rates.</li>
-                      <li><strong>AI Chatbot Integration with Messaging Platforms:</strong> Seamlessly integrate chatbots into WhatsApp, Facebook Messenger, and other platforms for multi-channel communication.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="w-full sm:w-1/2 px-4 relative">
-              <div class="bg-white p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 h-full">
-               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="48" height="48" rx="8" fill="#F0FDF4" /> <g transform="translate(6,6) scale(1.5)" stroke="#022C22" stroke-width="1.5" fill="none">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
-                  </g>
-                </svg>
-                <div class="mt-6">
-                  <h5 class="text-2xl font-medium mb-3">AI-Powered Lead Generation & CRM Integration </h5>
-                  <p class="mb-6 text-gray-700">Hands-on CRM Training | CRM Integration for Automated Sales & Support <br> AI-Driven Lead Capture and Nurturing <br> Multi-Channel CRM Communication (WhatsApp, Email, SMS)</p>
-                  <a class="inline-block text-lg font-medium text-teal-700 hover:text-teal-900 cursor-pointer" @click="openModal = openModal === 'crm' ? null : 'crm'">Read more</a>
-                </div>
-              </div>
-              <div class="absolute top-0 right-full mr-4 z-50 w-96" x-show="openModal === 'crm'" x-transition.opacity x-on:click.outside="openModal = null">
-                <div class="bg-white backdrop-blur-lg rounded-lg shadow-xl p-8 border border-gray-200">
-                  <button class="absolute top-0 right-1 text-gray-500 hover:text-gray-700" @click="openModal = null">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                  </button>
-                  <h3 class="text-2xl font-bold mb-4 text-gray-800">AI-Powered Lead Generation & CRM Integration Details</h3>
-                  <p class="text-gray-700 mb-4 text-sm">
-                      Supercharge your sales and customer management with our integrated solutions:
-                  </p>
-                  <ul class="list-disc list-inside text-gray-700 mb-4 text-sm space-y-1">
-                      <li><strong>Hands-on CRM Training:</strong> Empower your team with the knowledge and skills to effectively use your CRM system.</li>
-                      <li><strong>CRM Integration for Automated Sales & Support:</strong> Automate sales processes, customer support, and lead nurturing directly within your CRM.</li>
-                      <li><strong>AI-Driven Lead Capture and Nurturing:</strong> Utilize AI to identify, capture, and nurture high-quality leads, converting them into loyal customers.</li>
-                      <li><strong>Multi-Channel CRM Communication (WhatsApp, Email, SMS):</strong> Manage customer interactions across various platforms seamlessly from your CRM.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            </template>
 
           </div>
         </div>
       </div>
     </div>
-</section>
+  </section>
 
-  <section class="relative py-12 lg:py-16 bg-orange-50 overflow-hidden">
+   <section class="relative py-12 lg:py-16 bg-orange-50 overflow-hidden">
     <img class="absolute bottom-0 left-0" src="" alt=""/>
     <div class="container px-4 mx-auto relative">
       <div class="flex flex-wrap justify-center mb-8 -mx-4">
@@ -261,7 +198,7 @@
       </div>
     </div>
 </section>
-</div>
-</body>
+    </div>
+  </body>
+</html>
 
-  </html>
