@@ -13,37 +13,39 @@
   <body class="antialiased bg-body text-body font-body">
     
         <section class="overflow-hidden" x-data="{ mobileNavOpen: false }">
-           <nav class="mx-4 py-6 border-b" >
-    <div class="container mx-auto px-4">
+          <nav class="mx-4 py-6 border-b">
+      <div class="container mx-auto px-4">
         <div class="relative flex items-center justify-between">
-            <a class="inline-block" href="index.html">
-                <img class="h-8" src="" alt=""/>
-            </a>
-            <ul 
-                :class="{
-                    'hidden': !mobileNavOpen, 
-                    'flex flex-col md:flex-row absolute md:static top-full left-0 w-full bg-white md:bg-transparent pt-18 p-4 md:p-0 z-20': mobileNavOpen
-                }" 
-                class="md:flex" 
-                @click.outside="mobileNavOpen = false"
-            >
-                <li class="mr-4 lg:mr-8 mb-4 md:mb-0"><a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="index.html">Home</a></li>
-                <li class="mr-4 lg:mr-8 mb-4 md:mb-0"><a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="services.html">Services</a></li>
-                <li class="mr-4 lg:mr-8"><a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="contact.html">Contact us</a></li>
-            </ul>
-            <div class="flex items-center justify-end">
-                
-                <button class="md:hidden text-teal-900 hover:text-teal-800" @click="mobileNavOpen = !mobileNavOpen; $event.stopPropagation()">
-                    <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5.19995 23.2H26.7999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M5.19995 16H26.7999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M5.19995 8.79999H26.7999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                </button>
-            </div>
+          <a class="inline-block" href="index.html">
+            <img class="h-8" src="" alt="" />
+          </a>
+          <ul
+  :class="mobileNavOpen 
+    ? 'flex flex-col md:flex-row absolute md:static top-full left-0 w-full bg-white md:bg-transparent pt-16 p-4 md:p-0 z-50' 
+    : 'hidden md:flex'"
+  @click.outside="mobileNavOpen = false">
+            <li class="mr-4 lg:mr-8 mb-4 md:mb-0">
+              <a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="index.html">Home</a>
+            </li>
+            <li class="mr-4 lg:mr-8 mb-4 md:mb-0">
+              <a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="services.html">Services</a>
+            </li>
+            <li class="mr-4 lg:mr-8">
+              <a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="contact.html">Contact us</a>
+            </li>
+          </ul>
+          <div class="flex items-center justify-end">
+            <button class="md:hidden text-teal-900 hover:text-teal-800" @click="mobileNavOpen = !mobileNavOpen; $event.stopPropagation()">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.2 23.2H26.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M5.2 16H26.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M5.2 8.8H26.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+          </div>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
           
       <section class="relative py-12 lg:py-24 overflow-hidden">
     <div class="container mx-auto px-4 relative">
