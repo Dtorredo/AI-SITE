@@ -60,76 +60,77 @@
           <div class="flex flex-wrap -mx-4">
 
             <template x-for="(service, index) in [
-              {
-                key: 'automation',
-                title: 'Automation Service',
-                description: 'Smart Appointment Scheduling<br>Automated Invoicing & Payments<br>Workflow Optimization',
-                details: `<ul class='list-disc list-inside text-gray-700 space-y-2 mb-6'>
-                  <li><strong>Smart Appointment Scheduling:</strong> Manage bookings, reduce no-shows, optimize calendars.</li>
-                  <li><strong>Automated Invoicing & Payments:</strong> Generate/send invoices, track payments, send reminders.</li>
-                  <li><strong>Workflow Optimization:</strong> Automate tasks, reduce errors, increase efficiency.</li>
-                </ul><p class='text-gray-700'>Embrace automation to free up time and let your team focus on growth and customer success.</p>`
-              },
-              {
-                key: 'webdev',
-                title: 'Web Development',
-                description: 'AI powered E-commerce Websites | Custom Business Websites<br>Websites with CRM Integration<br>Website Performance Optimization | WordPress Websites',
-                details: `<ul class='list-disc list-inside text-gray-700 mb-4 text-sm space-y-1'>
-                  <li><strong>AI-powered E-commerce Websites:</strong> Enhance user experience with AI-driven recommendations.</li>
-                  <li><strong>Custom Business Websites:</strong> Unique websites designed to represent your brand.</li>
-                  <li><strong>Websites with CRM Integration:</strong> Efficient lead management and customer interaction.</li>
-                  <li><strong>Performance Optimization:</strong> Fast loading times and smooth user experience.</li>
-                  <li><strong>WordPress Websites:</strong> Customized flexible websites built on WordPress.</li>
-                </ul>`
-              },
-              {
-                key: 'chatbot',
-                title: 'AI Chatbot Integration',
-                description: 'AI Customer Support Chatbots | AI Sales & Lead Generation Bots<br>AI Product Recommendation Systems<br>Chatbot Integration with Messaging Platforms',
-                details: `<ul class='list-disc list-inside text-gray-700 mb-4 text-sm space-y-1'>
-                  <li><strong>Customer Support:</strong> Provide 24/7 support and reduce response times.</li>
-                  <li><strong>Sales & Lead Bots:</strong> Qualify leads and guide customers.</li>
-                  <li><strong>Recommendation Systems:</strong> Boost engagement with personalized suggestions.</li>
-                  <li><strong>Messaging Platform Integration:</strong> Seamlessly connect with WhatsApp, Messenger, and more.</li>
-                </ul>`
-              },
-              {
-                key: 'crm',
-                title: 'AI-Powered Lead Gen & CRM Integration',
-                description: 'Hands-on CRM Training | CRM Integration for Automated Sales & Support<br>Lead Capture and Nurturing<br>Multi-Channel CRM Communication',
-                details: `<ul class='list-disc list-inside text-gray-700 mb-4 text-sm space-y-1'>
-                  <li><strong>CRM Training:</strong> Equip your team with CRM skills.</li>
-                  <li><strong>Automated Sales & Support:</strong> Integrated into your CRM system.</li>
-                  <li><strong>Lead Nurturing:</strong> AI-powered lead conversion strategies.</li>
-                  <li><strong>Multi-Channel:</strong> Use WhatsApp, Email, SMS directly via CRM.</li>
-                </ul>`
-              }
-            ]" :key="index">
-              <div class="w-full sm:w-1/2 px-4 mb-16 relative">
-                <div class="bg-white p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 h-full">
-                  <div class="mt-6">
-                    <h5 class="text-2xl font-medium mb-3" x-text="service.title"></h5>
-                    <p class="mb-6 text-gray-700" x-html="service.description"></p>
-                    <a class="inline-block text-lg font-medium text-teal-700 hover:text-teal-900 cursor-pointer"
-                       @click="openModal = openModal === service.key ? null : service.key">Read more</a>
-                  </div>
-                </div>
-                <div class="absolute top-0 left-full ml-4 z-50 w-96"
-                     x-show="openModal === service.key"
-                     x-transition.opacity
-                     x-on:click.outside="openModal = null">
-                  <div class="bg-white backdrop-blur-lg rounded-lg shadow-xl p-8 border border-gray-200">
-                    <button class="absolute top-0 right-1 text-gray-500 hover:text-gray-700" @click="openModal = null">
-                      <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                    </button>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800" x-text="service.title + ' Details'"></h3>
-                    <div class="text-gray-700 text-sm" x-html="service.details"></div>
-                  </div>
-                </div>
-              </div>
-            </template>
+  {
+    key: 'automation',
+    title: 'Automation Service',
+    description: 'Smart Appointment Scheduling<br>Automated Invoicing & Payments<br>Workflow Optimization',
+    details: `<ul class='list-disc list-inside text-gray-700 text-sm space-y-2'>
+      <li><strong>Smart Appointment Scheduling:</strong> Manage bookings, reduce no-shows, optimize calendars.</li>
+      <li><strong>Automated Invoicing & Payments:</strong> Generate/send invoices, track payments, send reminders.</li>
+      <li><strong>Workflow Optimization:</strong> Automate tasks, reduce errors, increase efficiency.</li>
+    </ul>
+    <p class='text-gray-700 text-sm'>Embrace automation to free up time and let your team focus on growth and customer success.</p>`
+  },
+  {
+    key: 'webdev',
+    title: 'Web Development',
+    description: 'AI powered E-commerce Websites | Custom Business Websites<br>Websites with CRM Integration<br>Website Performance Optimization | WordPress Websites',
+    details: `<ul class='list-disc list-inside text-gray-700 text-sm space-y-2'>
+      <li><strong>AI-powered E-commerce Websites:</strong> Enhance user experience with AI-driven recommendations.</li>
+      <li><strong>Custom Business Websites:</strong> Unique websites designed to represent your brand.</li>
+      <li><strong>Websites with CRM Integration:</strong> Efficient lead management and customer interaction.</li>
+      <li><strong>Performance Optimization:</strong> Fast loading times and smooth user experience.</li>
+      <li><strong>WordPress Websites:</strong> Customized flexible websites built on WordPress.</li>
+    </ul>`
+  },
+  {
+    key: 'chatbot',
+    title: 'AI Chatbot Integration',
+    description: 'AI Customer Support Chatbots | AI Sales & Lead Generation Bots<br>AI Product Recommendation Systems<br>Chatbot Integration with Messaging Platforms',
+    details: `<ul class='list-disc list-inside text-gray-700 text-sm space-y-2'>
+      <li><strong>Customer Support:</strong> Provide 24/7 support and reduce response times.</li>
+      <li><strong>Sales & Lead Bots:</strong> Qualify leads and guide customers.</li>
+      <li><strong>Recommendation Systems:</strong> Boost engagement with personalized suggestions.</li>
+      <li><strong>Messaging Platform Integration:</strong> Seamlessly connect with WhatsApp, Messenger, and more.</li>
+    </ul>`
+  },
+  {
+    key: 'crm',
+    title: 'AI-Powered Lead Gen & CRM Integration',
+    description: 'Hands-on CRM Training | CRM Integration for Automated Sales & Support<br>Lead Capture and Nurturing<br>Multi-Channel CRM Communication',
+    details: `<ul class='list-disc list-inside text-gray-700 text-sm space-y-2'>
+      <li><strong>CRM Training:</strong> Equip your team with CRM skills.</li>
+      <li><strong>Automated Sales & Support:</strong> Integrated into your CRM system.</li>
+      <li><strong>Lead Nurturing:</strong> AI-powered lead conversion strategies.</li>
+      <li><strong>Multi-Channel:</strong> Use WhatsApp, Email, SMS directly via CRM.</li>
+    </ul>`
+  }
+]" :key="index">
+  <div class="w-full sm:w-1/2 px-4 mb-16 relative">
+    <div class="bg-white p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 h-full">
+      <div class="mt-6">
+        <h5 class="text-2xl font-medium mb-3" x-text="service.title"></h5>
+        <p class="mb-6 text-gray-700" x-html="service.description"></p>
+        <a class="inline-block text-lg font-medium text-teal-700 hover:text-teal-900 cursor-pointer"
+           @click="openModal = openModal === service.key ? null : service.key">Read more</a>
+      </div>
+    </div>
+    <div class="absolute top-0 left-full ml-4 z-50 w-96"
+         x-show="openModal === service.key"
+         x-transition.opacity
+         x-on:click.outside="openModal = null">
+      <div class="bg-white backdrop-blur-lg rounded-lg shadow-xl p-8 border border-gray-200">
+        <button class="absolute top-0 right-1 text-gray-500 hover:text-gray-700" @click="openModal = null">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <h3 class="text-2xl font-normal mb-4 text-gray-800" x-text="service.title + ' Details'"></h3>
+       <div class="text-gray-700 text-lg leading-relaxed space-y-5" x-html="service.details"></div>
+      </div>
+    </div>
+  </div>
+</template>
 
           </div>
         </div>
