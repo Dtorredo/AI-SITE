@@ -47,7 +47,7 @@
       </div>
     </nav>
 
-    <div class="pt-16 pb-24 px-5 xs:px-8 xl:px-12">
+  <div class="pt-16 pb-24 px-5 xs:px-8 xl:px-12">
       <div class="container mx-auto px-4">
         <div class="flex mb-4 items-center">
           <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +56,7 @@
           <span class="inline-block ml-2 text-sm font-medium">What are the Services we offer?</span>
         </div>
         <div class="border-t border-teal-900 border-opacity-25 pt-14">
-          <h1 class="font-heading text-4xl sm:text-6xl mb-24">Key to an AI driven future</h1>
+          <h1 class="font-heading text-4xl sm:text-6xl mb-24 text-teal-900">Key to an AI driven future</h1>
           <div class="flex flex-wrap -mx-4">
 
             <template x-for="(service, index) in [
@@ -109,7 +109,7 @@
   <div class="w-full sm:w-1/2 px-4 mb-16 relative">
     <div class="bg-white p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 h-full">
       <div class="mt-6">
-        <h5 class="text-2xl font-medium mb-3" x-text="service.title"></h5>
+        <h5 class="text-2xl font-medium mb-3 text-teal-900" x-text="service.title"></h5>
         <p class="mb-6 text-gray-700" x-html="service.description"></p>
         <a class="inline-block text-lg font-medium text-teal-700 hover:text-teal-900 cursor-pointer"
            @click="openModal = openModal === service.key ? null : service.key">Read more</a>
@@ -137,7 +137,6 @@
       </div>
     </div>
   </section>
-
  
    
 <section class="py-12 lg:py-16 bg-orange-50 overflow-hidden">
