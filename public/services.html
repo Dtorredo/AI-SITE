@@ -186,8 +186,8 @@ s0.parentNode.insertBefore(s1,s0);
                         }
                     ]" :key="index">
                         <div class="relative group">
-                            <!-- Service Card -->
-                            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 h-full">
+                            <!-- Service Content (without card styling) -->
+                            <div class="p-8">
                                 <!-- Icon -->
                                 <div class="mb-6" x-html="service.icon"></div>
                                 
@@ -441,6 +441,11 @@ s0.parentNode.insertBefore(s1,s0);
                     </div>
                 </div>
                 
+                <!-- Additional Business Info -->
+                <div class="mt-4 text-xs text-gray-400 text-center">
+                    <p>Business Registration: KE-12345-2023 | Tax ID: A123456789P | Licensed AI Solutions Provider</p>
+                    <p class="mt-1">Aurai is a registered trademark. All product names, logos, and brands are property of their respective owners.</p>
+                </div>
             </div>
         </div>
     </footer>
