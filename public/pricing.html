@@ -92,31 +92,30 @@ s0.parentNode.insertBefore(s1,s0);
     </header>
 
     <!-- Hero Section -->
-    <section class="py-16 lg:py-24 bg-gradient-to-b from-gray-900 to-gray-800" x-data="{ activeTab: 'monthly' }">
-   <section class="py-16 lg:py-24 bg-gradient-to-b from-teal-900 to-teal-800" x-data="{ activeTab: 'monthly' }">
-    <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">Simple, Transparent Pricing</h1>
-        <p class="text-xl text-teal-100 max-w-2xl mx-auto mb-8">Choose the perfect plan for your business needs. No hidden fees, no surprises.</p>
-        
-        <!-- Pricing Toggle -->
-        <div class="inline-flex rounded-md shadow-sm mb-12">
-            <button 
-                @click="activeTab = 'monthly'" 
-                :class="activeTab === 'monthly' ? 'bg-lime-500 text-teal-900' : 'bg-teal-700 text-white hover:bg-teal-600'" 
-                class="px-6 py-3 text-sm font-medium rounded-l-lg border border-teal-600 focus:z-10 focus:outline-none transition"
-            >
-                Monthly Billing
-            </button>
-            <button 
-                @click="activeTab = 'annual'" 
-                :class="activeTab === 'annual' ? 'bg-lime-500 text-teal-900' : 'bg-teal-700 text-white hover:bg-teal-600'" 
-                class="px-6 py-3 text-sm font-medium rounded-r-lg border border-teal-600 focus:z-10 focus:outline-none transition"
-            >
-                Annual Billing (Save 20%)
-            </button>
+    <section class="py-16 lg:py-24 bg-gradient-to-b from-teal-50 to-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-teal-900 mb-6">Simple, Transparent Pricing</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">Choose the perfect plan for your business needs. No hidden fees, no surprises.</p>
+            
+            <!-- Pricing Toggle -->
+            <div class="inline-flex rounded-md shadow-sm mb-12">
+                <button 
+                    @click="activeTab = 'monthly'" 
+                    :class="activeTab === 'monthly' ? 'bg-teal-900 text-white' : 'bg-white text-teal-900 hover:bg-gray-100'" 
+                    class="px-6 py-3 text-sm font-medium rounded-l-lg border border-teal-900 focus:z-10 focus:outline-none transition"
+                >
+                    Monthly Billing
+                </button>
+                <button 
+                    @click="activeTab = 'annual'" 
+                    :class="activeTab === 'annual' ? 'bg-teal-900 text-white' : 'bg-white text-teal-900 hover:bg-gray-100'" 
+                    class="px-6 py-3 text-sm font-medium rounded-r-lg border border-teal-900 focus:z-10 focus:outline-none transition"
+                >
+                    Annual Billing (Save 20%)
+                </button>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Pricing Sections -->
     <section class="py-12 lg:py-16">
