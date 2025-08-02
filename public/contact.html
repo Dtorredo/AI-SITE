@@ -1,17 +1,20 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Contact Us | AI Solutions</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content="Get in touch with our AI solutions team for consultation, support, or partnership opportunities. We're here to help transform your business with intelligent automation."/>
-    <link rel="preconnect" href="https://fonts.gstatic.com"/>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/tailwind/tailwind.min.css"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png"/>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer="defer"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Aurai Solutions</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <!--Start of Tawk.to Script-->
+    <style>
+        body { font-family: 'Figtree', sans-serif; }
+    </style>
+</head>
+
+<!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
@@ -24,505 +27,468 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
-  <body class="antialiased bg-body text-body font-body">
+
+<body class="bg-white" x-data="{ mobileNavOpen: false }">
     
-
-<section class="overflow-hidden" 
-  x-data="{
-    mobileNavOpen: false,
-    init() {
-      const mq = window.matchMedia('(min-width: 768px)');
-      mq.addEventListener('change', (e) => {
-        if (e.matches) {
-          this.mobileNavOpen = false; // <-- keep menu closed on desktop
-        }
-      });
-    }
-  }">
-    
-           <nav class="mx-4 py-6 border-b" >
-    <div class="container mx-auto px-4">
-        <div class="relative flex items-center justify-between">
-            <a class="inline-block" href="index.html">
-                <img class="h-8" src="images/logo.svg" alt="AI Solutions Logo"/>
-            </a>
-            <ul
-  :class="{
-    'hidden': !mobileNavOpen,
-    'flex flex-row md:flex-row absolute md:static top-full left-0 w-full bg-white md:bg-transparent p-4 md:p-0 z-20': mobileNavOpen,
-    'md:flex': true
-  }"
-  @click.outside="mobileNavOpen = false"
->
-  <li class="mr-4 lg:mr-8 mb-4 md:mb-0">
-    <a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="index.html">Home</a>
-  </li>
-  <li class="mr-4 lg:mr-8 mb-4 md:mb-0">
-    <a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="services.html">Services</a>
-  </li>
-  <li class="mr-4 lg:mr-8">
-    <a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="pricing.html">Pricing</a>
-  </li>
-</ul>
-            <div class="flex items-center justify-end">
-                <button class="md:hidden text-teal-900 hover:text-teal-800 mx-auto block" @click="mobileNavOpen = !mobileNavOpen; $event.stopPropagation()">
-                    <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5.19995 23.2H26.7999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M5.19995 16H26.7999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M5.19995 8.79999H26.7999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </div>
-</nav>
-      </div>
-      
-      <!-- Contact Hero Section -->
-      <section class="py-12 lg:py-24 relative overflow-hidden bg-gradient-to-r from-teal-900 to-teal-700" :class="{ 'mt-[192px]': mobileNavOpen }">
-        <div class="container mx-auto px-4 relative">
-          <div class="max-w-4xl mx-auto text-center">
-            <h1 class="font-heading text-5xl sm:text-6xl md:text-7xl tracking-sm mb-6 text-white">Let's Build Something Amazing Together</h1>
-            <p class="text-xl text-teal-100 mb-12">We're here to help you take the first step toward smarter, AI-powered business automation. Whether you have questions or are ready to start your project, our team is ready to assist.</p>
-            <div class="flex flex-wrap justify-center gap-4">
-              <a href="#contact-form" class="px-8 py-4 bg-white text-teal-900 font-bold rounded-full hover:bg-teal-100 transition duration-300">Get in Touch</a>
-              <a href="tel:+254794018685" class="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-teal-900 transition duration-300">
-                <span class="flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                  +254 794 018 685
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Info Section -->
-      <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-          <div class="grid md:grid-cols-3 gap-8">
-            <!-- Contact Card 1 -->
-            <div class="bg-teal-50 p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
-              <div class="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold text-teal-900 mb-3">Email Us</h3>
-              <p class="text-gray-600 mb-4">Send us your questions or project details and we'll get back to you within 24 hours.</p>
-              <a href="mailto:info@aurai.co.ke" class="text-teal-600 font-medium hover:text-teal-800 transition">info@aurai.co.ke</a>
-            </div>
-            
-            <!-- Contact Card 2 -->
-            <div class="bg-teal-50 p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
-              <div class="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold text-teal-900 mb-3">Call Us</h3>
-              <p class="text-gray-600 mb-4">Available Monday to Friday from 8:00 AM to 6:00 PM EAT for immediate assistance.</p>
-              <a href="tel:+254794018685" class="text-teal-600 font-medium hover:text-teal-800 transition">+254 794 018 685</a>
-            </div>
-            
-            <!-- Contact Card 3 -->
-            <div class="bg-teal-50 p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
-              <div class="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold text-teal-900 mb-3">Visit Us</h3>
-              <p class="text-gray-600 mb-4">Schedule a meeting at our Nairobi office to discuss your project in person.</p>
-              <p class="text-teal-600 font-medium">Westlands, Nairobi, Kenya</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Form Section -->
-      <section id="contact-form" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-          <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-              <h2 class="text-3xl md:text-4xl font-bold text-teal-900 mb-4">Ready to Transform Your Business?</h2>
-              <p class="text-lg text-gray-600 max-w-2xl mx-auto">Fill out the form below and our AI solutions experts will contact you to discuss how we can help automate and optimize your business processes.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-              <div class="bg-white p-8 rounded-2xl shadow-md">
-                <h3 class="text-2xl font-bold text-teal-900 mb-6">Send Us a Message</h3>
-                <form action="">
-                  <div class="mb-6">
-                    <label class="block pl-4 mb-1 text-sm font-medium text-gray-700" for="">Full Name*</label>
-                    <input class="w-full px-4 py-3 outline-none ring-offset-0 focus:ring-2 focus:ring-teal-500 shadow rounded-full" type="text" required/>
-                  </div>
-                  <div class="mb-6">
-                    <label class="block pl-4 mb-1 text-sm font-medium text-gray-700" for="">Email*</label>
-                    <input class="w-full px-4 py-3 outline-none ring-offset-0 focus:ring-2 focus:ring-teal-500 shadow rounded-full" type="email" required/>
-                  </div>
-                  <div class="mb-6">
-                    <label class="block pl-4 mb-1 text-sm font-medium text-gray-700" for=""><span>Company</span> 
-                      <span class="text-gray-500">(optional)</span>
-                    </label>
-                    <input class="w-full px-4 py-3 outline-none ring-offset-0 focus:ring-2 focus:ring-teal-500 shadow rounded-full" type="text"/>
-                  </div>
-                  <div class="mb-6">
-                    <label class="block pl-4 mb-1 text-sm font-medium text-gray-700" for="">Phone Number</label>
-                    <input class="w-full px-4 py-3 outline-none ring-offset-0 focus:ring-2 focus:ring-teal-500 shadow rounded-full" type="tel"/>
-                  </div>
-                  <div class="mb-8">
-                    <label class="block pl-4 mb-1 text-sm font-medium text-gray-700" for="">Service*</label>
-                    <div class="relative w-full bg-white rounded-full">
-                      <select class="w-full px-4 py-3 text-gray-600 border rounded-full appearance-none cursor-pointer outline-none ring-offset-0 focus:ring-2 focus:ring-teal-500 bg-transparent relative" name="" id="" required>
-                        <option value="">Select service</option>
-                        <option value="automation">Business Process Automation</option>
-                        <option value="ai">AI Integration</option>
-                        <option value="web">Web Development</option>
-                        <option value="consulting">Consulting</option>
-                        <option value="other">Other</option>
-                      </select>
+    <!-- Navigation Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="mx-4 py-6 border-b">
+            <div class="container mx-auto px-4">
+                <div class="relative flex items-center justify-between">
+                    <!-- Logo -->
+                    <a class="inline-block" href="index.html">
+                        <div class="flex items-center">
+                            <span class="text-2xl font-bold text-teal-900">Aurai</span>
+                            <span class="text-2xl font-bold text-red-500">.</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Desktop Navigation -->
+                    <ul class="hidden md:flex items-center space-x-8">
+                        <li>
+                            <a class="text-teal-900 hover:text-teal-700 font-medium transition duration-200" href="services.html">Services</a>
+                        </li>
+                        <li>
+                            <a class="text-teal-900 hover:text-teal-700 font-medium transition duration-200" href="pricing.html">Pricing</a>
+                        </li>
+                        <li>
+                            <a class="text-teal-900 hover:text-teal-700 font-medium transition duration-200" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Mobile Navigation Toggle -->
+                    <button class="md:hidden text-teal-900 hover:text-teal-800 transition" 
+                            @click="mobileNavOpen = !mobileNavOpen; $event.stopPropagation()">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.2 23.2H26.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M5.2 16H26.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M5.2 8.8H26.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    
+                    <!-- Mobile Navigation Menu -->
+                    <div x-show="mobileNavOpen" 
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 transform -translate-y-2"
+                         x-transition:enter-end="opacity-100 transform translate-y-0"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 transform translate-y-0"
+                         x-transition:leave-end="opacity-0 transform -translate-y-2"
+                         class="absolute top-full left-0 w-full bg-white shadow-lg border-t md:hidden z-30"
+                         @click.outside="mobileNavOpen = false">
+                        <ul class="py-4">
+                            <li><a class="block px-6 py-3 text-teal-900 hover:text-teal-700 hover:bg-gray-50 font-medium transition" href="index.html">Home</a></li>
+                            <li><a class="block px-6 py-3 text-teal-900 hover:text-teal-700 hover:bg-gray-50 font-medium transition" href="services.html">Services</a></li>
+                            <li><a class="block px-6 py-3 text-teal-900 hover:text-teal-700 hover:bg-gray-50 font-medium transition" href="pricing.html">Pricing</a></li>
+                            <li><a class="block px-6 py-3 text-teal-900 hover:text-teal-700 hover:bg-gray-50 font-medium transition" href="contact.html">Contact Us</a></li>
+                        </ul>
                     </div>
-                  </div>
-                  <div class="mb-8">
-                    <label class="block pl-4 mb-1 text-sm font-medium text-gray-700" for="">Message*</label>
-                    <textarea class="w-full px-4 py-3 h-32 outline-none ring-offset-0 focus:ring-2 focus:ring-teal-500 shadow rounded-xl" required></textarea>
-                  </div>
-                  <button class="flex w-full py-4 px-5 items-center justify-center font-bold text-white hover:text-teal-900 border border-teal-900 hover:border-teal-700 bg-teal-900 hover:bg-teal-700 rounded-full transition duration-200">
-                    <span class="mr-2">Submit Message</span>
-                    <svg width="21" height="20" viewbox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5.25 10H15.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                      <path d="M10.5 4.75L15.75 10L10.5 15.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </button>
-                </form>
-              </div>
-              
-              <div>
-                <div class="bg-white p-8 rounded-2xl shadow-md mb-8">
-                  <h3 class="text-2xl font-bold text-teal-900 mb-4">What Happens Next?</h3>
-                  <ul class="space-y-4">
-                    <li class="flex items-start">
-                      <div class="flex-shrink-0 mt-1">
-                        <svg class="h-5 w-5 text-teal-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                      </div>
-                      <p class="ml-3 text-gray-700"><span class="font-semibold">1. Initial Consultation:</span> We'll review your inquiry and schedule a call to understand your needs.</p>
-                    </li>
-                    <li class="flex items-start">
-                      <div class="flex-shrink-0 mt-1">
-                        <svg class="h-5 w-5 text-teal-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                      </div>
-                      <p class="ml-3 text-gray-700"><span class="font-semibold">2. Solution Design:</span> Our experts will create a customized proposal for your business.</p>
-                    </li>
-                    <li class="flex items-start">
-                      <div class="flex-shrink-0 mt-1">
-                        <svg class="h-5 w-5 text-teal-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                      </div>
-                      <p class="ml-3 text-gray-700"><span class="font-semibold">3. Project Kickoff:</span> Once approved, we'll assemble your dedicated team and begin implementation.</p>
-                    </li>
-                  </ul>
                 </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-teal-900">
+        <div class="container mx-auto px-4 relative pt-24 pb-16 sm:pb-24 lg:pt-32 lg:pb-32">
+            <div class="max-w-2xl mx-auto text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">Get in Touch</h1>
+                <p class="text-xl text-white opacity-90 mb-8">We're here to help you take the first step toward smarter, AI-powered business automation.</p>
+                <a href="#contact-form" class="inline-block py-3 px-8 bg-lime-500 hover:bg-white text-teal-900 hover:text-teal-800 font-medium rounded-full transition duration-200">
+                    Contact Our Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="py-12 lg:py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-teal-900 mb-4">How to Reach Us</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Choose your preferred method to connect with our AI automation experts.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Contact Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-gray-100">
+                    <div class="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-teal-900 mb-3">Call Us</h3>
+                    <p class="text-gray-600 mb-4">Speak directly with our team during business hours.</p>
+                    <a href="tel:+254794018685" class="text-teal-700 hover:text-teal-900 font-medium text-lg">+254 794 018 685</a>
+                    <p class="text-sm text-gray-500 mt-2">Mon-Fri: 8AM-6PM EAT</p>
+                </div>
+
+                <!-- Contact Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-gray-100">
+                    <div class="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-teal-900 mb-3">Email Us</h3>
+                    <p class="text-gray-600 mb-4">Send us your questions and we'll respond within 24 hours.</p>
+                    <a href="mailto:info@aurai.co.ke" class="text-teal-700 hover:text-teal-900 font-medium text-lg">info@aurai.co.ke</a>
+                    <p class="text-sm text-gray-500 mt-2">Support available 24/7</p>
+                </div>
+
+                <!-- Contact Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-gray-100">
+                    <div class="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-teal-900 mb-3">Live Chat</h3>
+                    <p class="text-gray-600 mb-4">Chat instantly with our AI assistant or human support.</p>
+                    <button onclick="Tawk_API.maximize()" class="text-teal-700 hover:text-teal-900 font-medium text-lg">Start Chat Now</button>
+                    <p class="text-sm text-gray-500 mt-2">Average response time: 2 minutes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-12 lg:py-20 bg-white" id="contact-form">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <!-- Form Column -->
+                        <div class="md:w-1/2 p-8 md:p-12">
+                            <h2 class="text-3xl font-bold text-teal-900 mb-6">Send Us a Message</h2>
+                            <p class="text-gray-600 mb-8">Fill out the form below and our team will get back to you within 24 hours.</p>
+                            
+                            <form class="space-y-6">
+                                <div>
+                                    <label for="full-name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                    <input type="text" id="full-name" name="full-name" required 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-lime-500 outline-none transition duration-200">
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                    <input type="email" id="email" name="email" required 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-lime-500 outline-none transition duration-200">
+                                </div>
+                                
+                                <div>
+                                    <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company (Optional)</label>
+                                    <input type="text" id="company" name="company" 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-lime-500 outline-none transition duration-200">
+                                </div>
+                                
+                                <div>
+                                    <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Interested In</label>
+                                    <select id="service" name="service" 
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-lime-500 outline-none transition duration-200 appearance-none bg-white">
+                                        <option value="">Select a service</option>
+                                        <option value="automation">Business Process Automation</option>
+                                        <option value="web-dev">Custom Web Development</option>
+                                        <option value="chatbot">AI Chatbot Integration</option>
+                                        <option value="crm">AI-powered CRM Solutions</option>
+                                        <option value="consulting">Digital Strategy Consulting</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                                    <textarea id="message" name="message" rows="4" required 
+                                              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-lime-500 outline-none transition duration-200"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full py-3 px-6 bg-teal-900 hover:bg-teal-800 text-white font-medium rounded-lg transition duration-200 flex items-center justify-center">
+                                    <span>Send Message</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <!-- Info Column -->
+                        <div class="md:w-1/2 bg-teal-900 text-white p-8 md:p-12">
+                            <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-lg font-semibold">Our Location</h4>
+                                        <p class="text-teal-100">Nairobi, Kenya</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-lg font-semibold">Phone Number</h4>
+                                        <p class="text-teal-100">+254 794 018 685</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-lg font-semibold">Email Address</h4>
+                                        <p class="text-teal-100">info@aurai.co.ke</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-lg font-semibold">Business Hours</h4>
+                                        <p class="text-teal-100">Monday - Friday: 8AM - 6PM EAT</p>
+                                        <p class="text-teal-100">Weekends: By appointment</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-10">
+                                <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="text-white hover:text-lime-400 transition duration-200">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="text-white hover:text-lime-400 transition duration-200">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="text-white hover:text-lime-400 transition duration-200">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="text-white hover:text-lime-400 transition duration-200">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-12 lg:py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-teal-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Find quick answers to common questions about our services and processes.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div x-data="{ open: false }" class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button @click="open = !open" class="w-full flex justify-between items-center p-6 text-left bg-white hover:bg-gray-50 transition">
+                        <h3 class="text-lg font-medium">What industries do you specialize in?</h3>
+                        <svg class="w-5 h-5 transform transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-6 pt-2 bg-white">
+                        <p class="text-gray-700">We work with SMEs across various industries including healthcare, finance, retail, education, and manufacturing. Our AI solutions are adaptable to virtually any business sector that can benefit from automation and intelligent systems.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div x-data="{ open: false }" class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button @click="open = !open" class="w-full flex justify-between items-center p-6 text-left bg-white hover:bg-gray-50 transition">
+                        <h3 class="text-lg font-medium">How quickly can you implement an AI solution?</h3>
+                        <svg class="w-5 h-5 transform transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-6 pt-2 bg-white">
+                        <p class="text-gray-700">Implementation timelines vary based on project complexity. Simple chatbots can be deployed in 2-4 weeks, while comprehensive CRM integrations may take 8-12 weeks. We provide detailed timelines after our initial consultation.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div x-data="{ open: false }" class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button @click="open = !open" class="w-full flex justify-between items-center p-6 text-left bg-white hover:bg-gray-50 transition">
+                        <h3 class="text-lg font-medium">What's your pricing structure?</h3>
+                        <svg class="w-5 h-5 transform transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-6 pt-2 bg-white">
+                        <p class="text-gray-700">We offer both project-based pricing and monthly retainers, depending on your needs. Our <a href="pricing.html" class="text-teal-700 hover:text-teal-900 underline">pricing page</a> provides general estimates, but we recommend a consultation for accurate quotes tailored to your specific requirements.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div x-data="{ open: false }" class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button @click="open = !open" class="w-full flex justify-between items-center p-6 text-left bg-white hover:bg-gray-50 transition">
+                        <h3 class="text-lg font-medium">Do you provide ongoing support?</h3>
+                        <svg class="w-5 h-5 transform transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-6 pt-2 bg-white">
+                        <p class="text-gray-700">Yes, we offer various support packages from basic maintenance to comprehensive managed services. All our solutions include a 30-day warranty period, with optional extended support contracts available.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div x-data="{ open: false }" class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button @click="open = !open" class="w-full flex justify-between items-center p-6 text-left bg-white hover:bg-gray-50 transition">
+                        <h3 class="text-lg font-medium">How do you ensure data security?</h3>
+                        <svg class="w-5 h-5 transform transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-6 pt-2 bg-white">
+                        <p class="text-gray-700">We implement enterprise-grade security measures including encryption, access controls, and regular audits. Our solutions comply with GDPR and other relevant data protection regulations. We can also sign NDAs for sensitive projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-teal-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Automate Your Business?</h2>
+            <p class="text-xl text-teal-100 mb-8 max-w-2xl mx-auto">
+                Schedule a free consultation to discuss how AI can transform your operations and boost efficiency.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-white text-teal-800 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                    Get Started
+                </a>
+                <a href="pricing.html" class="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-teal-800 transition-colors font-semibold">
+                    View Pricing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 lg:py-16 bg-orange-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
                 
-                <div class="bg-teal-900 p-8 rounded-2xl shadow-md text-white">
-                  <h3 class="text-2xl font-bold mb-4">Need Immediate Help?</h3>
-                  <p class="mb-6">For urgent inquiries or technical support, please call our 24/7 support line:</p>
-                  <a href="tel:+254794018685" class="inline-flex items-center px-6 py-3 bg-white text-teal-900 font-bold rounded-full hover:bg-teal-100 transition duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                    </svg>
-                    +254 794 018 685
-                  </a>
+                <!-- Company Info -->
+                <div>
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">Aurai<span class="text-red-500">.</span></h2>
+                    <p class="text-gray-600 text-sm mb-4">Transforming businesses through intelligent automation and AI-powered solutions.</p>
+                    <div class="space-y-2 text-sm">
+                        <p><span class="font-semibold text-gray-700">Phone:</span> <a href="tel:+254794018685" class="text-gray-600 hover:text-orange-600">+254 794 018 685</a></p>
+                        <p><span class="font-semibold text-gray-700">Email:</span> <a href="mailto:info@aurai.co.ke" class="text-red-600 hover:text-orange-600">info@aurai.co.ke</a></p>
+                        <p><span class="font-semibold text-gray-700">Address:</span> <span class="text-gray-600">Nairobi, Kenya</span></p>
+                    </div>
                 </div>
-              </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 border-b border-red-500 inline-block">Quick Links</h3>
+                    <ul class="space-y-2 mt-2 text-sm">
+                        <li><a href="index.html" class="text-gray-600 hover:text-orange-600">Home</a></li>
+                        <li><a href="index.html#about-us-section" class="text-gray-600 hover:text-orange-600">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-gray-600 hover:text-orange-600">Portfolio</a></li>
+                        <li><a href="blog.html" class="text-gray-600 hover:text-orange-600">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-600 hover:text-orange-600">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 border-b border-red-500 inline-block">Services</h3>
+                    <ul class="space-y-2 mt-2 text-sm">
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600">Business Process Automation</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600">Custom Web Development</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600">AI Chatbot Integration</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600">AI-powered CRM Solutions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Industries -->
+                <div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 border-b border-red-500 inline-block">Industries</h3>
+                    <ul class="space-y-2 mt-2 text-sm">
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600">Healthcare</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600">Finance & Banking</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600">Retail & E-commerce</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600">Education</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Stay Connected</h3>
+                    <form class="mb-6">
+                        <input type="email" placeholder="Your email" class="w-full px-4 py-2 mb-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        <button type="submit" class="w-full bg-orange-600 text-white py-2 px-4 rounded-lg hover:bg-orange-700 transition">
+                            Subscribe
+                        </button>
+                    </form>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-orange-600">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-orange-600">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-orange-600">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-orange-600">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-300 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm text-gray-500 mb-4 md:mb-0">© 2025 Aurai Solutions. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-sm text-gray-500 hover:text-orange-600">Privacy Policy</a>
+                        <a href="#" class="text-sm text-gray-500 hover:text-orange-600">Terms of Service</a>
+                        <a href="#" class="text-sm text-gray-500 hover:text-orange-600">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
-
-      <!-- FAQ Section -->
-      <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-          <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-              <h2 class="text-3xl md:text-4xl font-bold text-teal-900 mb-4">Frequently Asked Questions</h2>
-              <p class="text-lg text-gray-600">Find quick answers to common questions about our services and processes.</p>
-            </div>
-            
-            <div class="space-y-4">
-              <!-- FAQ Item 1 -->
-              <div x-data="{ open: false }" class="border border-gray-200 rounded-xl overflow-hidden">
-                <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition">
-                  <span class="font-medium text-teal-900">What types of businesses do you work with?</span>
-                  <svg :class="{ 'rotate-180': open }" class="h-5 w-5 text-teal-600 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                </button>
-                <div x-show="open" x-collapse class="px-6 py-4 text-gray-700">
-                  <p>We work with businesses of all sizes across various industries including healthcare, finance, retail, education, and manufacturing. Our AI solutions are customizable to meet the specific needs of startups, SMEs, and large enterprises.</p>
-                </div>
-              </div>
-              
-              <!-- FAQ Item 2 -->
-              <div x-data="{ open: false }" class="border border-gray-200 rounded-xl overflow-hidden">
-                <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition">
-                  <span class="font-medium text-teal-900">How long does implementation typically take?</span>
-                  <svg :class="{ 'rotate-180': open }" class="h-5 w-5 text-teal-600 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                </button>
-                <div x-show="open" x-collapse class="px-6 py-4 text-gray-700">
-                  <p>Implementation timelines vary depending on project complexity. Simple automation solutions can be deployed in 2-4 weeks, while comprehensive AI integrations may take 3-6 months. During our initial consultation, we'll provide a detailed timeline based on your specific requirements.</p>
-                </div>
-              </div>
-              
-              <!-- FAQ Item 3 -->
-              <div x-data="{ open: false }" class="border border-gray-200 rounded-xl overflow-hidden">
-                <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition">
-                  <span class="font-medium text-teal-900">What support do you provide after implementation?</span>
-                  <svg :class="{ 'rotate-180': open }" class="h-5 w-5 text-teal-600 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                </button>
-                <div x-show="open" x-collapse class="px-6 py-4 text-gray-700">
-                  <p>We offer comprehensive post-implementation support including:</p>
-                  <ul class="list-disc pl-5 mt-2 space-y-1">
-                    <li>24/7 technical support</li>
-                    <li>Regular system maintenance and updates</li>
-                    <li>Performance monitoring and optimization</li>
-                    <li>Staff training sessions</li>
-                    <li>Quarterly business reviews</li>
-                  </ul>
-                  <p class="mt-2">Our support packages are customizable to your business needs.</p>
-                </div>
-              </div>
-              
-              <!-- FAQ Item 4 -->
-              <div x-data="{ open: false }" class="border border-gray-200 rounded-xl overflow-hidden">
-                <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition">
-                  <span class="font-medium text-teal-900">How do you ensure data security and privacy?</span>
-                  <svg :class="{ 'rotate-180': open }" class="h-5 w-5 text-teal-600 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                </button>
-                <div x-show="open" x-collapse class="px-6 py-4 text-gray-700">
-                  <p>Data security is our top priority. We implement multiple layers of protection including:</p>
-                  <ul class="list-disc pl-5 mt-2 space-y-1">
-                    <li>End-to-end encryption for all data transmissions</li>
-                    <li>Regular security audits and penetration testing</li>
-                    <li>GDPR and local data protection compliance</li>
-                    <li>Role-based access controls</li>
-                    <li>Secure cloud infrastructure with regular backups</li>
-                  </ul>
-                  <p class="mt-2">We can also sign NDAs and provide additional security measures for highly sensitive data.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA Section -->
-      <section class="py-16 bg-teal-900 text-white">
-        <div class="container mx-auto px-4">
-          <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Still Have Questions?</h2>
-            <p class="text-xl text-teal-100 mb-8 max-w-2xl mx-auto">Our AI solutions experts are ready to answer any questions you have about our services, pricing, or implementation process.</p>
-            <div class="flex flex-wrap justify-center gap-4">
-              <a href="#contact-form" class="px-8 py-4 bg-white text-teal-900 font-bold rounded-full hover:bg-teal-100 transition duration-300">Contact Us Now</a>
-              <a href="tel:+254794018685" class="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-teal-900 transition duration-300">
-                <span class="flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                  Call Our Team
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div>
-        <div>
-          <section>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-      
-        <footer class="py-12 lg:py-16 bg-orange-50 overflow-hidden">
-          <div class="max-w-7xl px-6 mx-auto">
-              <div class="flex flex-wrap justify-between gap-y-10 gap-x-6">
-
-                  <!-- Company Info -->
-                  <div class="flex-1 min-w-[200px] max-w-[250px]">
-                      <h2 class="font-bold text-gray-800 text-xl mb-4">Aurai<span class="text-red-500">.</span></h2>
-                      <p class="text-gray-600 text-sm mb-4">Transforming businesses through intelligent automation and AI-powered solutions. Your partner in digital innovation.</p>
-                      
-                      <div class="space-y-2 text-sm">
-                          <p><span class="font-semibold text-gray-700">Phone:</span> <a href="tel:+254794018685" class="text-gray-600 hover:text-orange-600">+254 794 018 685</a></p>
-                          <p><span class="font-semibold text-gray-700">Email:</span> <a href="mailto:info@aurai.co.ke" class="text-red-600 hover:text-orange-600 transition">info@aurai.co.ke</a></p>
-                          <p><span class="font-semibold text-gray-700">Address:</span> <span class="text-gray-600">Nairobi, Kenya</span></p>
-                          <p><span class="font-semibold text-gray-700">Hours:</span> <span class="text-gray-600">Mon-Fri 8AM-6PM EAT</span></p>
-                      </div>
-                  </div>
-
-                  <!-- Quick Links -->
-                  <div class="flex-1 min-w-[180px] max-w-[220px]">
-                      <h3 class="font-bold text-gray-800 text-lg mb-4 border-b border-red-500 inline-block">Quick Links</h3>
-                      <ul class="space-y-2 mt-2 text-sm">
-                          <li><a href="index.html" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› Home</a></li>
-                          <li><a href="index.html#about-us-section" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› About Us</a></li>
-                          <li><a href="portfolio.html" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› Portfolio</a></li>
-                          <li><a href="blog.html" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› Blog</a></li>
-                          <li><a href="contact.html" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› Contact Us</a></li>
-                          <li><a href="careers.html" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› Careers</a></li>
-                      </ul>
-                  </div>
-
-                  <!-- Services -->
-                  <div class="flex-1 min-w-[200px] max-w-[240px]">
-                      <h3 class="font-bold text-gray-800 text-lg mb-4 border-b border-red-500 inline-block">Our Services</h3>
-                      <ul class="space-y-2 mt-2 text-sm">
-                          <li><a href="automation.html" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› Business Process Automation</a></li>
-                          <li><a href="web-development.html" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› Custom Web Development</a></li>
-                          <li><a href="chatbot.html" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› AI Chatbot Integration</a></li>
-                          <li><a href="crm.html" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› AI-powered CRM Solutions</a></li>
-                          <li><a href="consulting.html" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› Digital Strategy Consulting</a></li>
-                          <li><a href="support.html" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› Technical Support & Maintenance</a></li>
-                      </ul>
-                  </div>
-
-                  <!-- Industries & Resources -->
-                  <div class="flex-1 min-w-[180px] max-w-[220px]">
-                      <h3 class="font-bold text-gray-800 text-lg mb-4 border-b border-red-500 inline-block">Industries</h3>
-                      <ul class="space-y-2 mt-2 text-sm mb-6">
-                          <li><a href="healthcare.html" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› Healthcare</a></li>
-                          <li><a href="finance.html" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› Finance & Banking</a></li>
-                          <li><a href="retail.html" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› Retail & E-commerce</a></li>
-                          <li><a href="education.html" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› Education</a></li>
-                          <li><a href="manufacturing.html" class="text-gray-600 hover:text-orange-600 transition font-medium flex items-center">› Manufacturing</a></li>
-                      </ul>
-                      
-                      <h4 class="font-semibold text-gray-700 text-sm mb-2">Resources</h4>
-                      <ul class="space-y-1 text-sm">
-                          <li><a href="case-studies.html" class="text-gray-600 hover:text-orange-600 transition">› Case Studies</a></li>
-                          <li><a href="whitepapers.html" class="text-gray-600 hover:text-orange-600 transition">› Whitepapers</a></li>
-                          <li><a href="faq.html" class="text-gray-600 hover:text-orange-600 transition">› FAQ</a></li>
-                      </ul>
-                  </div>
-
-                  <!-- Newsletter & Social -->
-                  <div class="flex-1 min-w-[280px] max-w-[320px]">
-                      <h3 class="font-bold text-gray-800 text-lg mb-4">Stay Connected</h3>
-                      
-                      <!-- Newsletter Signup -->
-                      <div class="mb-6">
-                          <p class="text-sm text-gray-600 mb-3">Subscribe to our newsletter for the latest updates on AI and automation trends.</p>
-                          <form action="#" method="POST" class="space-y-3">
-                              <input type="email" name="newsletter_email" placeholder="Enter your email" required
-                                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm" />
-                              <button type="submit"
-                                  class="w-full px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition duration-200 text-sm font-medium">
-                                  Subscribe to Newsletter
-                              </button>
-                          </form>
-                      </div>
-
-                      <!-- Social Media -->
-                      <div>
-                          <h4 class="font-semibold text-gray-700 text-sm mb-3">Follow Us</h4>
-                          <div class="flex gap-4">
-                              <a href="https://facebook.com/aurai.solutions" class="text-gray-700 hover:text-orange-600 transition transform hover:scale-110" title="Facebook">
-                                  <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                      <path d="M13 3h4V0h-4c-2.8 0-5 2.2-5 5v3H5v4h3v9h4v-9h3l1-4h-4V5c0-0.6 0.4-1 1-1z" />
-                                  </svg>
-                              </a>
-                              <a href="https://www.instagram.com/aurai_solutions" class="text-gray-700 hover:text-orange-600 transition transform hover:scale-110" title="Instagram">
-                                  <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                      <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.6.6.3 1.1.7 1.6 1.2.5.5.9 1 1.2 1.6.3.5.5 1.3.6 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.6 2.5-.3.6-.7 1.1-1.2 1.6-.5.5-1 .9-1.6 1.2-.5.3-1.3.5-2.5.6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.6-.6-.3-1.1-.7-1.6-1.2-.5-.5-.9-1-1.2-1.6-.3-.5-.5-1.3-.6-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .6-2.5.3-.6.7-1.1 1.2-1.6.5-.5 1-.9 1.6-1.2.5-.3 1.3-.5 2.5-.6C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.4 0-4.6.1-1.1.1-1.7.2-2.1.4-.5.2-.8.4-1.1.8-.3.3-.6.7-.8 1.1-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.5-.1 4.6s0 3.4.1 4.6c.1 1.1.2 1.7.4 2.1.2.5.4.8.8 1.1.3.3.7.6 1.1.8.4.2 1 .3 2.1.4 1.2.1 1.5.1 4.6.1s3.4 0 4.6-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.8-.4 1.1-.8.3-.3.6-.7.8-1.1.2-.4.3-1 .4-2.1.1-1.2.1-1.5.1-4.6s0-3.4-.1-4.6c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.8-.8-1.1-.3-.3-.7-.6-1.1-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.5-.1-4.6-.1zM12 5.8a6.2 6.2 0 1 1 0 12.4 6.2 6.2 0 0 1 0-12.4zm0 10.2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5.8-10.7a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0z" />
-                                  </svg>
-                              </a>
-                              <a href="https://linkedin.com/company/aurai-solutions" class="text-gray-700 hover:text-orange-600 transition transform hover:scale-110" title="LinkedIn">
-                                  <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                      <path d="M4.98 3.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM4.5 9h4.9v12h-4.9V9zM14.5 9c-1.65 0-2.48.89-2.92 1.52V9h-4.9v12h4.9v-6.36c0-.9.64-1.64 1.54-1.64.9 0 1.46.74 1.46 1.64V21h4.9v-6.93c0-3.15-1.68-4.6-3.98-4.6z"/>
-                                  </svg>
-                              </a>
-                              <a href="https://twitter.com/aurai_solutions" class="text-gray-700 hover:text-orange-600 transition transform hover:scale-110" title="X (Twitter)">
-                                  <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                                  </svg>
-                              </a>
-                              <a href="https://youtube.com/@aurai-solutions" class="text-gray-700 hover:text-orange-600 transition transform hover:scale-110" title="YouTube">
-                                  <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                                  </svg>
-                              </a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <!-- Certifications & Trust Badges -->
-              <div class="mt-12 pt-8 border-t border-gray-300">
-                  <div class="flex flex-wrap justify-between items-center gap-6">
-                      <div class="flex flex-wrap gap-6 text-sm text-gray-600">
-                          <span class="flex items-center gap-2">
-                              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                                  <path d="M12 2L13.2 8.6L20 9.5L13.2 10.4L12 17L10.8 10.4L4 9.5L10.8 8.6L12 2Z"/>
-                              </svg>
-                              ISO 27001 Compliant
-                          </span>
-                          <span class="flex items-center gap-2">
-                              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                              </svg>
-                              GDPR Compliant
-                          </span>
-                          <span class="flex items-center gap-2">
-                              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                                  <path d="M18,8A6,6 0 0,0 12,2A6,6 0 0,0 6,8H4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8H18M12,4A4,4 0 0,1 16,8H8A4,4 0 0,1 12,4Z"/>
-                              </svg>
-                              SSL Secured
-                          </span>
-                          <span class="flex items-center gap-2">
-                              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                                  <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z"/>
-                              </svg>
-                              24/7 Support
-                          </span>
-                      </div>
-                  </div>
-              </div>
-  
-              <!-- Footer Bottom -->
-              <div class="mt-8 pt-6 border-t border-gray-300">
-                  <div class="flex flex-wrap justify-between items-center gap-4">
-                      <div class="text-sm text-gray-500">
-                          <p>© 2025 <span class="font-semibold text-gray-700">Aurai Solutions</span>. All rights reserved.</p>
-                      </div>
-                      <div class="flex flex-wrap gap-6 text-sm">
-                          <a href="privacy-policy.html" class="text-gray-500 hover:text-orange-600 transition">Privacy Policy</a>
-                          <a href="terms-of-service.html" class="text-gray-500 hover:text-orange-600 transition">Terms of Service</a>
-                          <a href="cookie-policy.html" class="text-gray-500 hover:text-orange-600 transition">Cookie Policy</a>
-                          <a href="accessibility.html" class="text-gray-500 hover:text-orange-600 transition">Accessibility</a>
-                          <a href="sitemap.xml" class="text-gray-500 hover:text-orange-600 transition">Sitemap</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </footer>
-    </div>
-  </body>
+    </footer>
+</body>
 </html>
