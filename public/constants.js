@@ -4,5 +4,5 @@ const API_ENDPOINTS = {
 };
 
 const API_KEYS = {
-    FRONTEND: 'your-frontend-api-key'
+    FRONTEND: 'apelisoltechedgh45jfgdj48wifbiejiejiebc'
 };
