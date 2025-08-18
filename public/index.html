@@ -9,6 +9,18 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS when document loads
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                easing: 'ease-out-cubic'
+            });
+        });
+    </script>
     <style>
         body { font-family: 'Figtree', sans-serif; }
         
@@ -76,14 +88,96 @@ s0.parentNode.insertBefore(s1,s0);
     </div>
 
     <!-- Hero Section -->
-    <section class="relative bg-teal-900">
+    <section class="relative bg-teal-900 overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-grid-white/[0.05] bg-[length:40px_40px]"></div>
+            <div class="absolute top-1/2 left-1/2 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-teal-600/20 to-transparent rounded-full blur-3xl"></div>
+        </div>
+        
         <div class="container mx-auto px-4 relative pt-24 pb-16 sm:pb-24 lg:pt-32 lg:pb-32">
             <div class="max-w-2xl mx-auto text-center">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">AI Tools for Busy SMEs</h1>
-                <p class="text-xl text-white opacity-90 mb-8">We build chatbots, workflow automations, and CRM systems that save you 10+ hours/month</p>
-                <a href="#about-us-section" class="inline-block py-3 px-8 bg-lime-500 hover:bg-white text-teal-900 hover:text-teal-800 font-medium rounded-full transition duration-200">
-                    About Us
-                </a>
+                <h1 
+                    class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+                    <span class="inline-block">AI Tools for</span>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-lime-400 to-emerald-300">
+                        <span class="block sm:inline">Busy SMEs</span>
+                    </span>
+                </h1>
+                
+                <p 
+                    class="text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                >
+                    We build <span class="font-medium text-lime-300">chatbots</span>, 
+                    <span class="font-medium text-emerald-300">workflow automations</span>, and 
+                    <span class="font-medium text-cyan-300">CRM systems</span> that save you 10+ hours/month
+                </p>
+                
+                <div 
+                    class="flex flex-col sm:flex-row justify-center gap-4"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                >
+                    <a 
+                        href="#about-us-section" 
+                        class="inline-flex items-center justify-center py-3 px-8 bg-lime-500 hover:bg-white text-teal-900 hover:text-teal-800 font-medium rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+                    >
+                        About Us
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a 
+                        href="#contact-section" 
+                        class="inline-flex items-center justify-center py-3 px-8 bg-white/10 hover:bg-white/20 text-white font-medium rounded-full border border-white/20 hover:border-white/30 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+                    >
+                        Get in Touch
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Animated Stats -->
+                <div 
+                    class="mt-16 grid grid-cols-2 sm:grid-cols-3 gap-8 max-w-3xl mx-auto"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                >
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-lime-400 mb-2">10+</div>
+                        <div class="text-sm text-white/70 uppercase tracking-wider">Years Experience</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-emerald-400 mb-2">50+</div>
+                        <div class="text-sm text-white/70 uppercase tracking-wider">Happy Clients</div>
+                    </div>
+                    <div class="text-center col-span-2 sm:col-span-1">
+                        <div class="text-4xl font-bold text-cyan-400 mb-2">100+</div>
+                        <div class="text-sm text-white/70 uppercase tracking-wider">Projects Delivered</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated Scroll Indicator -->
+        <div 
+            class="absolute bottom-8 left-1/2 -translate-x-1/2"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-offset="-100"
+        >
+            <div class="animate-bounce flex flex-col items-center">
+                <span class="text-xs text-white/50 mb-2">Scroll Down</span>
+                <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
             </div>
         </div>
     </section>
