@@ -11,6 +11,47 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Figtree', sans-serif; }
+        
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-100% + 100vw)); }
+        }
+        
+        .sliding-container {
+            display: flex;
+            width: max-content;
+            animation: slide 30s linear infinite;
+        }
+        
+        .sliding-container:hover {
+            animation-play-state: paused;
+        }
+        
+        .services-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .services-wrapper::before,
+        .services-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            z-index: 2;
+            pointer-events: none;
+        }
+        
+        .services-wrapper::before {
+            left: 0;
+            background: linear-gradient(90deg, white, transparent);
+        }
+        
+        .services-wrapper::after {
+            right: 0;
+            background: linear-gradient(270deg, white, transparent);
+        }
     </style>
 </head>
 
@@ -50,22 +91,46 @@ s0.parentNode.insertBefore(s1,s0);
     <!-- Services Overview -->
     <section class="py-12 lg:py-20">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <h3 class="text-2xl lg:text-3xl font-bold text-teal-900 mb-3">Automation Service</h3>
-                    <p class="text-gray-600">Streamline your business processes</p>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-2xl lg:text-3xl font-bold text-teal-900 mb-3">Web Development</h3>
-                    <p class="text-gray-600">Conversion-focused websites</p>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-2xl lg:text-3xl font-bold text-teal-900 mb-3">AI Chatbot Integration</h3>
-                    <p class="text-gray-600">AI Customer Support Chatbots</p>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-2xl lg:text-3xl font-bold text-teal-900 mb-3">AI-Powered Lead Generation</h3>
-                    <p class="text-gray-600">CRM Integration for Automated Sales</p>
+            <div class="services-wrapper">
+                <div class="sliding-container">
+                    <!-- Duplicate the services for seamless looping -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="text-center px-4">
+                            <h3 class="text-2xl lg:text-3xl font-bold text-teal-900 mb-3">Automation Service</h3>
+                            <p class="text-gray-600">Streamline your business processes</p>
+                        </div>
+                        <div class="text-center px-4">
+                            <h3 class="text-2xl lg:text-3xl font-bold text-teal-900 mb-3">Web Development</h3>
+                            <p class="text-gray-600">Conversion-focused websites</p>
+                        </div>
+                        <div class="text-center px-4">
+                            <h3 class="text-2xl lg:text-3xl font-bold text-teal-900 mb-3">AI Chatbot Integration</h3>
+                            <p class="text-gray-600">AI Customer Support Chatbots</p>
+                        </div>
+                        <div class="text-center px-4">
+                            <h3 class="text-2xl lg:text-3xl font-bold text-teal-900 mb-3">AI-Powered Lead Generation</h3>
+                            <p class="text-gray-600">CRM Integration for Automated Sales</p>
+                        </div>
+                    </div>
+                    <!-- Duplicate for seamless looping -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ml-8">
+                        <div class="text-center px-4">
+                            <h3 class="text-2xl lg:text-3xl font-bold text-teal-900 mb-3">Automation Service</h3>
+                            <p class="text-gray-600">Streamline your business processes</p>
+                        </div>
+                        <div class="text-center px-4">
+                            <h3 class="text-2xl lg:text-3xl font-bold text-teal-900 mb-3">Web Development</h3>
+                            <p class="text-gray-600">Conversion-focused websites</p>
+                        </div>
+                        <div class="text-center px-4">
+                            <h3 class="text-2xl lg:text-3xl font-bold text-teal-900 mb-3">AI Chatbot Integration</h3>
+                            <p class="text-gray-600">AI Customer Support Chatbots</p>
+                        </div>
+                        <div class="text-center px-4">
+                            <h3 class="text-2xl lg:text-3xl font-bold text-teal-900 mb-3">AI-Powered Lead Generation</h3>
+                            <p class="text-gray-600">CRM Integration for Automated Sales</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
