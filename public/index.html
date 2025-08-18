@@ -30,6 +30,13 @@
         .services-wrapper {
             overflow: hidden;
             position: relative;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .services-wrapper::-webkit-scrollbar {
+            display: none;
         }
         
         .services-wrapper::before,
