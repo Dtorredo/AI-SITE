@@ -1,19 +1,48 @@
-# Remove .html extension from URLs
+# Enable the rewrite engine
 RewriteEngine On
 
-# Redirect .html URLs to extensionless URLs
-RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteRule ^ /%1? [NC,L,R=301]
-
-# Internally rewrite extensionless URLs to .html files
+# Remove trailing slashes
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^.]*)$ $1.html [NC,L]
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L,R=301]
 
-# Optional: Force HTTPS (uncomment if needed)
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Remove .html extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
 
-# Optional: Remove trailing slashes (uncomment if needed)
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule ^(.*)/$ /$1 [L,R=301]
+# Redirect /index to root
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Redirect /index.html to root
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index(\ |$)
+RewriteRule ^index(\ |/|$) / [R=301,L]
+
+# Set default character set
+AddDefaultCharset UTF-8
+
+# Enable compression for faster loading
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Set browser caching for better performance
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresDefault "access plus 2 days"
+</IfModule>
