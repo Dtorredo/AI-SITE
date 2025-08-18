@@ -1,4 +1,8 @@
 <?php
+// Include Composer's autoloader
+require_once __DIR__ . '/../vendor/autoload.php';
+
+// Then include your email config
 require_once __DIR__ . '/../config/email.php';
 
 header('Content-Type: text/plain; charset=utf-8');
@@ -18,13 +22,18 @@ echo "SMTP User: " . SMTP_USER . "\n";
 echo "From Email: " . SITE_EMAIL . "\n";
 echo "To Email: " . $testEmail . "\n\n";
 
+// Check if PHPMailer is available
+if (!file_exists(__DIR__ . '/../vendor/autoload.php')) {
+    die("❌ Error: Composer dependencies not found. Please run 'composer install' in the project root.\n");
+}
+
 try {
     // Check if PHPMailer is loaded
     if (!class_exists('PHPMailer\PHPMailer\PHPMailer')) {
-        throw new Exception('PHPMailer is not properly installed or included.');
+        throw new Exception('PHPMailer is not properly installed. Run: composer require phpmailer/phpmailer');
     }
     
-    $mail = new PHPMailer(true);
+    $mail = new PHPMailer\PHPMailer\PHPMailer(true);
     
     // Server settings
     $mail->isSMTP();
@@ -32,7 +41,7 @@ try {
     $mail->SMTPAuth = true;
     $mail->Username = SMTP_USER;
     $mail->Password = SMTP_PASS;
-    $mail->SMTPSecure = SMTP_SECURE;
+    $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port = SMTP_PORT;
     
     // Enable verbose debug output
@@ -78,6 +87,7 @@ try {
     
     if (strpos($error, 'PHPMailer') !== false) {
         echo "• Make sure PHPMailer is properly installed via Composer\n";
+        echo "  Run: composer require phpmailer/phpmailer\n";
     }
 }
 
