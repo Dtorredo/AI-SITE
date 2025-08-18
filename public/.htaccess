@@ -5,7 +5,18 @@ RewriteEngine On
 RewriteBase /
 
 # API Rewrite Rule - Route API requests to the api directory
-RewriteRule ^api/(.*)$ /aurai/api/$1 [L,QSA]
+RewriteRule ^api/(.*)$ /aurai/public/api/$1 [L,QSA]
+
+# Handle front controller pattern
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)\.html$ $1.php [L]
+
+# Handle clean URLs (remove .html extension)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L,QSA]
 
 # Redirect www to non-www (or vice versa if preferred)
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
