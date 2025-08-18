@@ -1,54 +1,116 @@
-Ukunahi AI – AI-Powered Business Automation for SMEs
+# Aurai Solutions - AI Services Website
 
-[live demo](https://ai-site-nqsw.vercel.app/)
-🚀 Overview
+This is the official website for Aurai Solutions, providing AI-powered business automation services.
 
-Ukunahi AI is a business automation service designed to help SMEs scale efficiently using AI-powered solutions. Our platform provides AI-driven websites, chatbots, email marketing automation, and social media management to enhance customer engagement and business growth.
+## Features
 
-📌 Features
-	•	AI-Powered Websites – High-converting, SEO-optimized websites tailored for business growth.
-	•	Smart Chatbots – 24/7 automated customer support for lead generation and customer service.
-	•	Automated Email Marketing – AI-driven campaigns to increase open rates and conversions.
-	•	Social Media Automation – AI-generated captions and content scheduling for enhanced audience engagement.
-	•	Interactive AI Virtual Assistant – Real-time AI chatbot for user interaction and customer inquiries.
+- Modern, responsive design
+- Contact form with email notifications
+- Service showcase
+- Pricing plans
+- FAQ section
+- Admin dashboard for form submissions
 
-📂 Repository Structure
+## Requirements
 
-This repository contains the source code and assets for the Ukunahi AI website.
-AI-SITE/
-│── index.html        # Home page  and about us
-│── services.html     # Services page   
-│── contact.html      # Contact page  
-│── assets/           # Images, styles, and scripts  
-│── css/              # Stylesheets  
-│── js/               # JavaScript files  
+- PHP 7.4 or higher
+- MySQL 5.7 or higher
+- Composer (for PHP dependencies)
+- Node.js & NPM (for frontend assets)
 
- 🎯 Installation & Usage
+## Installation
 
-To run this project locally:
-	1.	Clone the repository: git clone https://github.com/Dtorredo/AI-SITE.git
- 	2.	Navigate to the project directory: cd AI-SITE
-  3.	Open index.html in a browser.
+1. **Clone the repository**
+   ```bash
+   git clone [repository-url] aurai-site
+   cd aurai-site
 
-🔥 Key Pages
+Install PHP dependencies
 
-🏠 Home Page
-	•	Headline: “AI-Powered Growth for SMEs – Automate, Scale, Dominate.”
-	•	Call to Action: [Book a Free Consultation]
-	•	AI Chatbot Demo: Interactive pop-up AI assistant.
+composer install
 
-📌 Services Page
-	•	AI-driven web development, chatbots, email marketing, and social media automation.
-	•	Call to Actions: [Build My Website], [Deploy My AI Chatbot], [Boost My Socials].
+Install Node.js dependencies
 
-🏆 Case Studies
-	•	AI Chatbot → 45% More Conversions
-	•	Website Redesign → 60% Sales Boost
+npm install
 
-📩 Contact Page
-	•	Call to Action: “Got Questions? Let’s Build Your AI Strategy.”
-	•	Form for inquiries & free consultation booking.
+Setup environment
 
-🛠️ Tech Stack
-	•	Frontend: HTML, CSS, JavaScript
-	•	AI Chatbot: Integrated interactive AI assistant
+
+Copy .env.example to .env
+
+Update the .env file with your database and email settings
+
+Generate an application key:
+php -r "echo 'APP_KEY=base64:' . base64_encode(random_bytes(32));"
+
+Add this to your .env file
+
+
+
+Database setup
+
+
+Create a new MySQL database
+
+Import the database schema from database/schema.sql
+
+Update the .env file with your database credentials
+
+
+
+Configure web server
+
+
+Point your web server's document root to the public directory
+
+Ensure mod_rewrite is enabled (for Apache)
+
+Set proper file permissions:
+chmod -R 755 storage
+chmod -R 755 bootstrap/cache
+
+
+
+Email configuration
+
+
+Update the email settings in .env
+
+Test the email functionality using the contact form
+
+
+
+
+Development
+
+
+Frontend assets:
+
+npm run dev    # Compile assets for development
+npm run watch  # Watch for changes
+npm run prod   # Compile assets for production
+
+PHP Development Server:
+
+php -S localhost:8000 -t public
+
+
+Security
+
+
+Keep your .env file secure and never commit it to version control
+
+Use strong passwords for database and email accounts
+
+Keep all dependencies up to date
+
+Regularly backup your database
+
+
+License
+
+This project is proprietary software. All rights reserved.
+
+Support
+
+For support, please contact support@aurai.co.ke
