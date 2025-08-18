@@ -1,6 +1,17 @@
 <?php
-// File: api/subscribe.php
+// Set CORS headers to allow cross-origin requests
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type, Authorization');
 header('Content-Type: application/json');
+
+// Handle preflight OPTIONS request
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
+
+// Include configurations
 require_once __DIR__ . '/../../config/database.php';
 require_once __DIR__ . '/../../config/email.php';
 
@@ -17,19 +28,32 @@ try {
     }
 
     // Get and validate input
-    $input = json_decode(file_get_contents('php://input'), true);
+    $input = json_decode(file_get_contents('php://input'), true) ?? [];
     
-    if (json_last_error() !== JSON_ERROR_NONE) {
-        throw new Exception('Invalid JSON input.');
+    // If no JSON data, try form data
+    if (empty($input)) {
+        $input = $_POST;
     }
 
-    $email = filter_var($input['email'] ?? '', FILTER_VALIDATE_EMAIL);
-    $name = trim($input['name'] ?? '');
-    
-    if (!$email) {
-        throw new Exception('Please provide a valid email address.');
+    // Validate required fields
+    $errors = [];
+    if (empty($input['email'])) {
+        $errors['email'] = 'Email is required';
+    } elseif (!filter_var($input['email'], FILTER_VALIDATE_EMAIL)) {
+        $errors['email'] = 'Please enter a valid email address';
     }
 
+    // If there are validation errors, return them
+    if (!empty($errors)) {
+        http_response_code(422);
+        echo json_encode(['success' => false, 'errors' => $errors]);
+        exit;
+    }
+
+    $email = filter_var($input['email'], FILTER_SANITIZE_EMAIL);
+    $name = !empty($input['name']) ? htmlspecialchars($input['name']) : '';
+    $source = !empty($input['source']) ? htmlspecialchars($input['source']) : 'website';
+    
     // Get database connection
     $pdo = getDBConnection();
     
@@ -50,11 +74,21 @@ try {
     // Generate token for unsubscribe link
     $token = bin2hex(random_bytes(32));
     $now = date('Y-m-d H:i:s');
+    $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+    $userAgent = $_SERVER['HTTP_USER_AGENT'] ?? 'unknown';
+    
+    $meta = [
+        'source' => $source,
+        'timestamp' => $now,
+        'ip' => $ip,
+        'user_agent' => $userAgent,
+        'referrer' => $_SERVER['HTTP_REFERER'] ?? null
+    ];
     
     // Prepare and execute insert/update query
     $stmt = $pdo->prepare("
         INSERT INTO subscriptions (email, name, token, ip_address, user_agent, meta, is_active, subscribed_at)
-        VALUES (:email, :name, :token, :ip, :ua, :meta, 1, :subscribed_at)
+        VALUES (:email, :name, :token, :ip_address, :user_agent, :meta, 1, :subscribed_at)
         ON DUPLICATE KEY UPDATE 
             name = VALUES(name),
             token = VALUES(token),
@@ -67,18 +101,12 @@ try {
             subscribed_at = IF(unsubscribed_at IS NOT NULL, VALUES(subscribed_at), subscribed_at)
     ");
 
-    $meta = [
-        'source' => 'website-footer',
-        'timestamp' => $now,
-        'form_data' => $input
-    ];
-
     $success = $stmt->execute([
         ':email' => $email,
         ':name' => $name ?: null,
         ':token' => $token,
-        ':ip' => $_SERVER['REMOTE_ADDR'] ?? null,
-        ':ua' => $_SERVER['HTTP_USER_AGENT'] ?? null,
+        ':ip_address' => $ip,
+        ':user_agent' => $userAgent,
         ':meta' => json_encode($meta),
         ':subscribed_at' => $now
     ]);
@@ -96,12 +124,13 @@ try {
         'name' => $name ?: 'there',
         'unsubscribe_link' => $unsubscribeLink,
         'current_year' => date('Y'),
-        'signup_date' => date('F j, Y')
+        'signup_date' => date('F j, Y'),
+        'email' => $email
     ];
     
     $emailSent = sendEmail(
         $email,
-        'Thanks for subscribing to Aurai Solutions!',
+        'Thanks for subscribing to ' . SITE_NAME . '!',
         'welcome_subscriber',
         $emailData
     );
@@ -120,8 +149,9 @@ try {
             'name' => $name,
             'email' => $email,
             'subscribed_at' => $now,
-            'ip' => $_SERVER['REMOTE_ADDR'] ?? 'Unknown',
-            'user_agent' => $_SERVER['HTTP_USER_AGENT'] ?? 'Not available',
+            'ip' => $ip,
+            'user_agent' => $userAgent,
+            'unsubscribe_link' => ADMIN_URL . '/subscriptions/' . $subscriptionId . '/unsubscribe',
             'meta' => $meta
         ]
     );
@@ -138,11 +168,17 @@ try {
 
 } catch (PDOException $e) {
     error_log('Database error in subscribe.php: ' . $e->getMessage());
-    $response['message'] = 'A database error occurred. Please try again later.';
+    $response = [
+        'success' => false,
+        'message' => 'A database error occurred. Please try again later.'
+    ];
     http_response_code(500);
 } catch (Exception $e) {
     error_log('Error in subscribe.php: ' . $e->getMessage());
-    $response['message'] = $e->getMessage();
+    $response = [
+        'success' => false,
+        'message' => $e->getMessage()
+    ];
     http_response_code(400);
 }
 
@@ -152,5 +188,4 @@ if (ob_get_level() > 0) {
 }
 
 // Send JSON response
-header('Content-Type: application/json');
 echo json_encode($response);
