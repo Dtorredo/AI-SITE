@@ -83,114 +83,14 @@ s0.parentNode.insertBefore(s1,s0);
     </div>
 
     <!-- Hero Section -->
-<section class="relative bg-teal-900 overflow-hidden">
-    <!-- Video Background -->
-    <div class="absolute inset-0 z-0">
-        <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-20">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-artificial-intelligence-analyzing-data-17206-large.mp4" type="video/mp4">
-            <!-- Fallback image if video doesn't load -->
-            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2400&q=80" alt="AI technology background" class="w-full h-full object-cover">
-        </video>
-        <div class="absolute inset-0 bg-teal-900 opacity-70"></div>
-    </div>
-
-    <div class="container mx-auto px-4 relative z-10 pt-24 pb-16 sm:pb-24 lg:pt-32 lg:pb-32">
-        <div class="max-w-3xl mx-auto text-center">
-            <!-- Animated Tagline -->
-            <div class="inline-block mb-6 px-4 py-2 bg-teal-700 bg-opacity-50 rounded-full backdrop-blur-sm">
-                <p class="text-lime-300 font-medium text-sm sm:text-base">AI-Powered Business Solutions</p>
-            </div>
-            
-            <!-- Main Headline with Typing Animation -->
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                <span class="inline-block">Transform Your Business with</span>
-                <span class="text-lime-400 relative">
-                    <span class="typing-text" x-data="{
-                        texts: ['AI Automation', 'Smart Chatbots', 'Workflow Tools', 'Time Savings'],
-                        currentText: '',
-                        textIndex: 0,
-                        charIndex: 0,
-                        isDeleting: false,
-                        typeSpeed: 100,
-                        deleteSpeed: 50,
-                        pauseTime: 2000
-                    }" x-init="
-                        let typingInterval;
-                        function typeWriter() {
-                            let current = $data.textIndex % $data.texts.length;
-                            let fullText = $data.texts[current];
-                            
-                            if ($data.isDeleting) {
-                                $data.currentText = fullText.substring(0, $data.charIndex - 1);
-                                $data.charIndex--;
-                            } else {
-                                $data.currentText = fullText.substring(0, $data.charIndex + 1);
-                                $data.charIndex++;
-                            }
-                            
-                            if (!$data.isDeleting && $data.currentText === fullText) {
-                                $data.isDeleting = true;
-                                setTimeout(typeWriter, $data.pauseTime);
-                                return;
-                            }
-                            
-                            if ($data.isDeleting && $data.currentText === '') {
-                                $data.isDeleting = false;
-                                $data.textIndex++;
-                                $data.charIndex = 0;
-                            }
-                            
-                            const speed = $data.isDeleting ? $data.deleteSpeed : $data.typeSpeed;
-                            typingInterval = setTimeout(typeWriter, speed);
-                        }
-                        
-                        typingInterval = setTimeout(typeWriter, $data.typeSpeed);
-                        
-                        return () => clearTimeout(typingInterval);
-                    " x-text="currentText"></span>
-                    <span class="absolute bottom-1 left-0 w-full h-0.5 bg-lime-400 animate-pulse"></span>
-                </span>
-            </h1>
-            
-            <!-- Subheadline -->
-            <p class="text-xl sm:text-2xl text-white opacity-90 mb-8 leading-relaxed">
-                We build custom AI solutions that automate repetitive tasks, streamline operations, 
-                and save your team <span class="font-semibold text-lime-300">10-30 hours per month</span> — so you can focus on growth.
-            </p>
-            
-            <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#about-us-section" class="inline-flex items-center justify-center py-3 px-8 bg-lime-500 hover:bg-white text-teal-900 hover:text-teal-800 font-medium rounded-full transition duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                    See How It Works
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-8l-7 7-7-7"></path>
-                    </svg>
+    <section class="relative bg-teal-900">
+        <div class="container mx-auto px-4 relative pt-24 pb-16 sm:pb-24 lg:pt-32 lg:pb-32">
+            <div class="max-w-2xl mx-auto text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">AI Tools for Busy SMEs</h1>
+                <p class="text-xl text-white opacity-90 mb-8">We build chatbots, workflow automations, and CRM systems that save you 10+ hours/month</p>
+                <a href="#about-us-section" class="inline-block py-3 px-8 bg-lime-500 hover:bg-white text-teal-900 hover:text-teal-800 font-medium rounded-full transition duration-200">
+                    About Us
                 </a>
-                <a href="/contact.html" class="inline-flex items-center justify-center py-3 px-8 bg-transparent border-2 border-white text-white hover:bg-white hover:text-teal-800 font-medium rounded-full transition duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                    Get Free Consultation
-                </a>
-            </div>
-            
-            <!-- Trust Indicators -->
-            <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-white text-opacity-80 text-sm">
-                <div class="flex items-center gap-2">
-                    <svg class="w-5 h-5 text-lime-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span>No-Code Solutions</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg class="w-5 h-5 text-lime-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span>24/7 Support</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg class="w-5 h-5 text-lime-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span>30-Day ROI Guarantee</span>
-                </div>
             </div>
         </div>
     </section>
